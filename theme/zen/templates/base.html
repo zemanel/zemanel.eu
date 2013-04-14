@@ -40,7 +40,6 @@
                         <li><a href="{{ link }}">{{ name }}</a></li>
                         {% endfor %}
                     </ul>
-                    <p>&copy; {{ AUTHOR }} 2013</p>
                 </div>
             </div>
             <!-- content -->
@@ -53,7 +52,8 @@
         <!-- footer -->
         <footer>
             <p><small>
-                <a href="{{ SITEURL }}/index.html">{{ SITENAME }}</a>, a <a href="http://docs.getpelican.com">Pelican</a> blog by {{ AUTHOR }}
+                <a href="{{ SITEURL }}/index.html">{{ SITENAME }} ({{ SITEDSN }})</a>,
+                a <a href="http://docs.getpelican.com">Pelican</a> blog by &copy; {{ AUTHOR }} 2013
             </small>
             </p>
         </footer>

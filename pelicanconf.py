@@ -3,9 +3,15 @@ import os
 
 SITEDIR = os.path.realpath(os.path.dirname(__file__))
 
+# General Settings
+
 AUTHOR = u'Jos\xe9 Moreira'
 SITENAME = u'There And Back'
 SITEURL = 'http://www.zemanel.eu'
+RELATIVE_URLS = True
+
+SITEDSN = 'www.zemanel.eu' # custom setting
+
 FEED_DOMAIN = SITEURL
 TIMEZONE = 'Europe/Lisbon'
 GOOGLE_ANALYTICS = ''
