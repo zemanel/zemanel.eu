@@ -16,22 +16,17 @@
 <body>
     <div class="container">
         <header>
-            <ul class="nav top-nav">
-                <div class="row">
-                    <div class="brand span2"><h1>{{ SITENAME }}</h1></div>
-                    <div class="navmenu span10">
-                        <i class="icon-home"></i> <a href="{{ SITEURL }}/index.html">Home</a>
-                        {% if DISPLAY_PAGES_ON_MENU %}
-                        {% for page in PAGES %}
-                        <i class="icon-book"></i> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
-                        {% endfor %}
-                        {% endif %}
-                        <i class="icon-briefcase"></i> <a href="{{ SITEURL }}/archives.html">Archives</a>
-                        <i class="icon-folder-close"></i> <a href="{{ SITEURL }}/categories.html">Categories</a>
-                        <i class="icon-tag"></i> <a href="{{ SITEURL }}/tags.html">Tags</a>
-                    </div>
-                </div>
-            </ul>
+            <div class="nav">
+                <i class="icon-home"></i> <a href="{{ SITEURL }}/index.html">Home</a>
+                {% if DISPLAY_PAGES_ON_MENU %}
+                {% for page in PAGES %}
+                <i class="icon-book"></i> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+                {% endfor %}
+                {% endif %}
+                <i class="icon-briefcase"></i> <a href="{{ SITEURL }}/archives.html">Archives</a>
+                <i class="icon-folder-close"></i> <a href="{{ SITEURL }}/categories.html">Categories</a>
+                <i class="icon-tag"></i> <a href="{{ SITEURL }}/tags.html">Tags</a>
+            </div>
         </header>
         <div class="row">
             <!-- sidebar -->

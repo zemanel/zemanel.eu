@@ -4,7 +4,7 @@ import os
 SITEDIR = os.path.realpath(os.path.dirname(__file__))
 
 AUTHOR = u'Jos\xe9 Moreira'
-SITENAME = u'zemanel.eu'
+SITENAME = u'there and back ...'
 SITEURL = 'http://www.zemanel.eu'
 FEED_DOMAIN = SITEURL
 TIMEZONE = 'Europe/Lisbon'
