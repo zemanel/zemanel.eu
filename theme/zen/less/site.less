@@ -1,16 +1,20 @@
+// Variables
+
+@secundary-text-color: #36393D;
+
 // Site styles
 body {
   background-color: #E8E8E8;
 }
 // General
 a {
-  color: #0077cc;
+  color: @secundary-text-color;
   //text-decoration: underline;
 }
 a:hover, a:focus {
-  color: #0077cc;
+  color: @secundary-text-color;
   .opacity(70);
-  //text-decoration: none;
+  text-decoration: none;
 }
 // Navigation
 /**
@@ -39,7 +43,6 @@ a:hover, a:focus {
   }
 }
 
-
 // Sidebar
 #sidebar {
   //margin-top: 40px;
@@ -62,7 +65,7 @@ a:hover, a:focus {
   .article {
     margin-bottom: 20px;
     .title {
-      //.page-header;
+      color: @secundary-text-color;
       border-bottom: 1px solid #EEEEEE;
     }
     .metadata a {
@@ -72,6 +75,8 @@ a:hover, a:focus {
       margin-top: 10px;
     }
     .more {
+      font-weight: bolder;
+      text-transform: uppercase;
       margin-top: 10px;
     }
   }
