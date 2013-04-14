@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>{% block windowtitle %}{{ SITENAME }}{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="author" content="{{ AUTHOR }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="{{ SITEURL }}/theme/main.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/main-responsive.css" rel="stylesheet">
+
+    {% include "analytics.html" %}
+    {% include "disqus.html" %}
+</head>
+<body>
+    <div class="container">
+        <header>
+            <ul class="nav top-nav">
+                <div class="row">
+                    <div class="brand span2"><h1>{{ SITENAME }}</h1></div>
+                    <div class="navmenu span10">
+                        <i class="icon-home"></i> <a href="{{ SITEURL }}/index.html">Home</a>
+                        {% if DISPLAY_PAGES_ON_MENU %}
+                        {% for page in PAGES %}
+                        <i class="icon-book"></i> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+                        {% endfor %}
+                        {% endif %}
+                        <i class="icon-folder-close"></i> <a href="{{ SITEURL }}/categories.html">Categories</a>
+                        <i class="icon-tags"></i> <a href="{{ SITEURL }}/tags.html">Tags</a>
+                    </div>
+                </div>
+            </ul>
+        </header>
+        <div class="row">
+            <!-- sidebar -->
+            <div class="span2">
+                <div id="sidebar">
+                    <!-- Avatar -->
+                    <div id="avatar"><a href="{{ SITEURL }}/index.html"><img src="/theme/images/avatar.jpg" /></a></div>
+                    <!-- social links -->
+                    <ul class="nav social">
+                        {% for name, link in SOCIAL %}
+                        <li><a href="{{ link }}">{{ name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    <p>Powered by <a href="http://docs.getpelican.com">Pelican</a>.</p>
+                    <p>&copy; {{ AUTHOR }} 2013</p>
+                </div>
+            </div>
+            <!-- content -->
+            <div class="content span10">
+                <div class="inner">
+                    {% block content %}{% endblock %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
