@@ -40,7 +40,6 @@
                         <li><a href="{{ link }}">{{ name }}</a></li>
                         {% endfor %}
                     </ul>
-                    <p>Powered by <a href="http://docs.getpelican.com">Pelican</a>.</p>
                     <p>&copy; {{ AUTHOR }} 2013</p>
                 </div>
             </div>
@@ -49,9 +48,16 @@
                 <div class="inner">
                     {% block content %}{% endblock %}
                 </div>
-
             </div>
         </div>
+        <!-- footer -->
+        <footer>
+            <p><small>
+                <a href="{{ SITEURL }}/index.html">{{ SITENAME }}</a>, a <a href="http://docs.getpelican.com">Pelican</a> blog by {{ AUTHOR }}
+            </small>
+            </p>
+        </footer>
+
     </div>
 </body>
 </html>
