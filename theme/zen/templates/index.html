@@ -7,7 +7,7 @@
     <div class="title"><h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2></div>
     <div class="metadata">{% include "metadata.html" %}</div>
     <div class="summary">{{ article.summary }}</div>
-    <p><a class="more" href="{{ SITEURL }}/{{ article.url }}"><i class="icon-zoom-in"> </i>more</a></p>
+    <div class="more"><a href="{{ SITEURL }}/{{ article.url }}"><i class="icon-zoom-in"> </i>more</a></div>
 </div>	
 {% endfor %}
 {%endif%}
