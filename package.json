@@ -1,0 +1,12 @@
+{
+    "name": "zemanel.eu",
+    "description": "Package dependencies for my site.",
+    "version": "0.1.0",
+    "keywords": [],
+    "homepage": "http://zemanel.eu",
+    "author": "José Moreira",
+    "licenses": [],
+    "devDependencies": {
+        "less": "1.3.3"
+    }
+}

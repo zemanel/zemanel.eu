@@ -11,7 +11,7 @@ SITENAME = u'There And Back'
 SITEURL = 'http://www.zemanel.eu'
 RELATIVE_URLS = True
 
-SITEDSN = 'www.zemanel.eu' # custom setting
+SITEDSN = 'www.zemanel.eu'  # custom setting
 
 FEED_DOMAIN = SITEURL
 TIMEZONE = 'Europe/Lisbon'
