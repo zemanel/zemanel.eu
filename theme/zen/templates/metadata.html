@@ -1,0 +1,3 @@
+<a class="more" href="{{ SITEURL }}/{{ article.url }}">{{ article.date }}</a>
+Category: <i class="icon-folder-close"></i> <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+ {% if article.tags %}Tags: {% for tag in article.tags %}<i class="icon-tag"></i> <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> {% endfor %}{% endif %}

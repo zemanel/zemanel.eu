@@ -1,0 +1,88 @@
+// Variables
+
+// http://modernl.com/article/web-2.0-colour-palette
+//@secundary-text-color: #36393D;
+//@secundary-text-color: #E75480; //dark pink
+@secundary-text-color: #3F4C6B; // Mozilla blue
+
+
+// Site styles
+body {
+  background-color: #E8E8E8;
+}
+// General
+a {
+  color: @secundary-text-color;
+  //text-decoration: underline;
+}
+a:hover, a:focus {
+  color: @secundary-text-color;
+  .opacity(70);
+  text-decoration: none;
+}
+// Navigation
+header {
+  margin-top: 10px;
+  .nav {
+    text-align:right;
+    a {
+      text-decoration: none;
+      padding-right: 10px;
+    }
+    a:hover, a:focus {
+    }
+  }
+}
+
+// Sidebar
+#sidebar {
+  //margin-top: 40px;
+}
+#avatar {
+  margin-bottom: 10px;
+  img {
+    .border-radius(3px);
+  }
+}
+
+// Content
+.content {
+  background-color: #FFFFFF;
+  .border-radius(1px);
+  .inner {
+    padding: 10px;
+  }
+  // article
+  .article {
+    margin-bottom: 20px;
+    .title {
+      color: @secundary-text-color;
+      border-bottom: 1px solid #EEEEEE;
+    }
+    .metadata a {
+      padding: 0 5px 0 5px;
+    }
+    .summary {
+      margin-top: 10px;
+    }
+    .more {
+      font-weight: bolder;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+    .codehilite {
+      pre {
+        background-color: #EEEEEE;
+        border: 0;
+      }
+    }
+  }
+}
+
+// Footer
+
+footer p {
+  text-align: right;
+  padding: 10px;
+}
+
