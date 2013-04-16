@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*- #
 import os
+import sys
 
-SITEDIR = os.path.realpath(os.path.dirname(__file__))
+SITEDIR = os.path.abspath(os.path.dirname(__file__))
 
 # General Settings
 
@@ -18,9 +19,11 @@ GOOGLE_ANALYTICS = ''
 DEFAULT_LANG = u'en'
 
 # Plugins
-PLUGIN_PATH = SITEDIR.join('vendor/pelican_plugins')
+PLUGIN_PATH = os.path.join(SITEDIR, 'vendor/pelican_plugins')
+
 PLUGINS = [
-    'pelican.plugins.sitemap',
+    'sitemap',
+    'w3c_validate',
 ]
 
 # Sitemap plugin
