@@ -1,4 +1,9 @@
-<a href="{{ SITEURL }}/{{ article.url }}">{{ article.date }}</a>
-<i class="icon-folder-close"></i> <strong>category</strong> <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-<i class="icon-tag"></i> {% if article.tags %}<strong>tags</strong> {% for tag in article.tags %}
-<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% endfor %}{% endif %}
+<p>
+    <strong>created on</strong> <a href="{{ SITEURL }}/{{ article.url }}">{{ article.date }}</a>
+    {% if article.modified %}<strong>updated</strong> {{ article.modified }} {% endif %}
+</p>
+<p>
+    <i class="icon-folder-close"></i> <strong>category</strong> <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+    <i class="icon-tag"></i> {% if article.tags %}<strong>tags</strong> {% for tag in article.tags %}
+    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% endfor %}{% endif %}
+</p>
