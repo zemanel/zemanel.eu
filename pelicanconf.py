@@ -61,10 +61,12 @@ TWITTER_USERNAME = 'zemanel'
 SOCIAL = (
     ('Twitter', 'http://twitter.com/zemanel'),
     ('Github', 'http://github.com/zemanel'),
-    ('Linkedin', 'http://pt.linkedin.com/in/josemoreira'),
-    ('Stackoverflow', 'http://stackoverflow.com/users/2278823/zemanel'),
+    ('Bitbucket', 'http://bitbucket.org/zemanel'),
     ('Careers 2.0', 'http://careers.stackoverflow.com/zemanel'),
-
+    ('Linkedin', 'http://pt.linkedin.com/in/josemoreira'),
+    ('StackOverflow', 'http://stackoverflow.com/users/2278823/zemanel'),
+    ('Last.fm', 'http://www.last.fm/user/jose.moreira'),
+    ('Facebook', 'http://facebook.com/OVerdadeiroJoseMoreira'),
 )
 
 DEFAULT_PAGINATION = 10

@@ -13,5 +13,5 @@ Fabric==1.6.0
 honcho==0.4.0
 
 # quality check
-http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz
+http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz#egg=closure_linter
 flake8==2.0

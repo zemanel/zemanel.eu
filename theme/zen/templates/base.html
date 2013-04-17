@@ -19,6 +19,7 @@
         <header>
             <div class="nav">
                 <i class="icon-home"></i> <a href="{{ SITEURL }}/index.html">Home</a>
+                <a class="icon" href="{{ SITEURL }}/feeds/all.atom.xml">RSS</a>
                 {% if DISPLAY_PAGES_ON_MENU %}
                 {% for page in PAGES %}
                 <i class="icon-book"></i> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
@@ -39,7 +40,7 @@
                     <h3>Social</h3>
                     <ul class="nav social">
                         {% for name, link in SOCIAL %}
-                        <li><a href="{{ link }}">{{ name }}</a></li>
+                        <li><a class="icon" href="{{ link }}">{{ name }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
