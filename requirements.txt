@@ -8,6 +8,10 @@ Markdown==2.3.1
 webassets==0.8
 py_w3c==0.1.0
 
+# devops
 Fabric==1.6.0
-flake8==2.0
 honcho==0.4.0
+
+# quality check
+http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz
+flake8==2.0
