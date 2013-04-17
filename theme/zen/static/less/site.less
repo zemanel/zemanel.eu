@@ -5,26 +5,37 @@
 //@secundary-text-color: #E75480; //dark pink
 @secundary-text-color: #3F4C6B; // Mozilla blue
 
+// mixins
 
-// Site styles
+.divider {
+  border-bottom: 1px solid #EEEEEE;
+  margin: 10px 0;
+}
+
+// General site styles
 body {
   background-color: #E8E8E8;
 }
-// General
+h1, h2, h3, h4, h5, h6 {
+  color: @secundary-text-color;
+}
 a {
   color: @secundary-text-color;
-  //text-decoration: underline;
 }
 a:hover, a:focus {
   color: @secundary-text-color;
   .opacity(70);
   text-decoration: none;
 }
+ul {
+  list-style: square;
+}
 // Navigation
 header {
   margin-top: 10px;
   .nav {
     text-align:right;
+    line-height: 30px;
     a {
       text-decoration: none;
       padding-right: 10px;
@@ -33,10 +44,12 @@ header {
     }
   }
 }
-
 // Sidebar
 #sidebar {
-  //margin-top: 40px;
+
+  .nav a {
+    margin-top: 5px;
+  }
 }
 #avatar {
   margin-bottom: 10px;
@@ -52,22 +65,23 @@ header {
   .inner {
     padding: 10px;
   }
+  .title {
+    .divider;
+  }
   // article
   .article {
-    margin-bottom: 20px;
-    .title {
-      color: @secundary-text-color;
-      border-bottom: 1px solid #EEEEEE;
-    }
     .metadata a {
       padding: 0 5px 0 5px;
     }
     .summary {
       margin-top: 10px;
     }
+    .post {
+      margin-top: 20px;
+    }
     .more {
       font-weight: bolder;
-      text-transform: uppercase;
+      text-transform: capitalize;
       margin-top: 10px;
     }
     .codehilite {
