@@ -3,7 +3,10 @@
 <div class="title"><h2>Categories</h2></div>
 <ul>
 {% for category, articles in categories %}
-	<li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+	<li>
+        <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}
+        (<a class="icon" href="{{ SITEURL }}/feeds/{{ category }}.atom.xml">Atom</a>)</a>
+    </li>
 {% endfor %}
 </ul>
 {% endblock %}
