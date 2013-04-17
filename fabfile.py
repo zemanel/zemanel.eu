@@ -52,6 +52,7 @@ def clean():
     """
     local('rm -rf %s' % OUTPUT_PATH)
 
+
 def update():
     """
     """
