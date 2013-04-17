@@ -13,7 +13,7 @@ def install():
     local('pip install -r requirements.txt')
 
 
-def test():
+def check():
     """
     Run quality tests.
     """
@@ -37,11 +37,14 @@ def clean():
 
 def update():
     """
+    Update (or create) static content
     """
+    clean()
     html()
 
 
 def serve():
     """
+    Start http-serving content
     """
     local('honcho start')
