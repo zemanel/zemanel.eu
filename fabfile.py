@@ -5,6 +5,14 @@ from pelicanconf import OUTPUT_PATH
 from pelicanconf import SITEDIR
 
 
+def install():
+    """
+    Install local dependencies
+    """
+    local('npm install .')
+    local('pip install -r requirements.txt')
+
+
 def test():
     """
     Run quality tests.
