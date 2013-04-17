@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*- #
 import os
-import sys
 
 SITEDIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -23,7 +22,7 @@ PLUGIN_PATH = os.path.join(SITEDIR, 'vendor/pelican_plugins')
 
 PLUGINS = [
     'sitemap',
-    'w3c_validate',
+    #'w3c_validate',
 ]
 
 # Sitemap plugin
@@ -45,13 +44,18 @@ SITEMAP = {
 THEME = os.path.join(SITEDIR, 'theme/zen')
 
 ## content
-#DELETE_OUTPUT_DIRECTORY = False
-OUTPUT_PATH = '_output'
+DELETE_OUTPUT_DIRECTORY = True
+OUTPUT_PATH = os.path.join(SITEDIR, '_output')
 ARTICLE_DIR = 'articles'
 PAGE_DIR = 'pages'
+
+_BOOTSTRAP_DIR = os.path.join(SITEDIR, 'vendor/bootstrap')
+
 FILES_TO_COPY = [
-    (os.path.join(SITEDIR, 'vendor/bootstrap/img/glyphicons-halflings.png'), 'img/glyphicons-halflings.png'),
-    (os.path.join(SITEDIR, 'vendor/bootstrap/img/glyphicons-halflings-white.png'), 'img/glyphicons-halflings-white.png'),
+    (os.path.join(_BOOTSTRAP_DIR, 'img/glyphicons-halflings.png'),
+     'img/glyphicons-halflings.png'),
+    (os.path.join(_BOOTSTRAP_DIR, 'img/glyphicons-halflings-white.png'),
+     'img/glyphicons-halflings-white.png'),
 ]
 
 # Social

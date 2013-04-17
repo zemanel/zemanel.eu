@@ -2,7 +2,7 @@
 #
 
 #pelican==3.1.1
--e git+git://github.com/getpelican/pelican.git@8be7c0dbae5bd094379d74fd47acb41a56f18afd#egg=pelican_dev
+-e git+git://github.com/getpelican/pelican.git@8be7c0dbae5bd094379d74fd47acb41a56f18afd#egg=pelican
 
 Markdown==2.3.1
 Fabric==1.6.0
