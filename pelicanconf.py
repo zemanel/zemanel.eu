@@ -23,6 +23,7 @@ PLUGIN_PATH = os.path.join(SITEDIR, 'vendor/pelican_plugins')
 PLUGINS = [
     'sitemap',
     #'w3c_validate',
+    'assets',
 ]
 
 # Sitemap plugin
@@ -40,6 +41,12 @@ SITEMAP = {
     }
 }
 
+#assets plugin
+_LESSC = '%s/node_modules/.bin/lessc' % SITEDIR
+ASSET_CONFIG = (
+    ('less_bin', _LESSC)
+)
+
 ## Appearence
 THEME = os.path.join(SITEDIR, 'theme/zen')
 
@@ -48,15 +55,6 @@ DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_PATH = os.path.join(SITEDIR, '_output')
 ARTICLE_DIR = 'articles'
 PAGE_DIR = 'pages'
-
-_BOOTSTRAP_DIR = os.path.join(SITEDIR, 'vendor/bootstrap')
-
-FILES_TO_COPY = [
-    (os.path.join(_BOOTSTRAP_DIR, 'img/glyphicons-halflings.png'),
-     'img/glyphicons-halflings.png'),
-    (os.path.join(_BOOTSTRAP_DIR, 'img/glyphicons-halflings-white.png'),
-     'img/glyphicons-halflings-white.png'),
-]
 
 # Social
 TWITTER_USERNAME = 'zemanel'

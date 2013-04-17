@@ -7,8 +7,9 @@
     <meta name="author" content="{{ AUTHOR }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="{{ SITEURL }}/theme/main.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/main-responsive.css" rel="stylesheet">
+    {% assets filters="less", output="css/main.css", "less/main.less", "less/main-responsive.less" %}
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+    {% endassets %}
 
     {% include "analytics.html" %}
     {% include "disqus.html" %}
