@@ -1,4 +1,5 @@
 *.pid
 *.pyc
 _output/
+node_modules
 
