@@ -57,3 +57,10 @@ def publish():
     html()
     local('ghp-import _output')
     local('git push origin gh-pages')
+
+
+def genetate_pygments_style(theme='colorful', cssclass='highlight'):
+    """
+    Generates a CSS
+    """
+    local('pygmentize -f html -S %s -a .%s' % (theme, cssclass))
