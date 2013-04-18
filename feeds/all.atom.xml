@@ -22,7 +22,12 @@
 &lt;p&gt;Starting a new blog based on &lt;a href="http://getpelican.com"&gt;Pelican&lt;/a&gt; and will import some older posts from my old Posterous-dead website.&lt;/p&gt;
 &lt;p&gt;I'm a Python/Javascript developer, Linux/OSX lover with a thing for devops. There are some cool posts i intend to write, for example how to write better code when you're not a rockstar, how to run applications on &lt;a href="http://openshift.com"&gt;OpenShift&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I'm also a Django developer (write web applications with Django, not a commiter) and love &lt;a href="http://dojotoolkit.com"&gt;Dojo Toolkit&lt;/a&gt;, so i hope to write more about those as well.&lt;/p&gt;
-&lt;p&gt;That is all, have fun!&lt;/p&gt;</summary><category term="no-real-content-yet-dept"></category></entry><entry><title>Fear is the mind-killer</title><link href="http://zemanel.eu/fear-is-the-mind-killer.html" rel="alternate"></link><updated>2011-07-03T23:23:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2011-07-03:fear-is-the-mind-killer.html</id><summary type="html">&lt;p&gt;There are many quotes and many pop phrases out there, about fate, love, dating, entrepreneurship. Quotes from famous and not so famous people.&lt;/p&gt;
+&lt;p&gt;That is all, have fun!&lt;/p&gt;</summary><category term="no-real-content-yet-dept"></category></entry><entry><title>Check out Posterous for Android</title><link href="http://zemanel.eu/check-out-posterous-for-android.html" rel="alternate"></link><updated>2011-11-06T18:44:00+00:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2011-11-06:check-out-posterous-for-android.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Posterous is the easiest way to share stories, photos and videos with the people you care about most. With Posterous, you can either post content to your public web site or selectively share to a private space.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://market.android.com/developer?pub=Posterous"&gt;https://market.android.com/developer?pub=Posterous&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;edit:&lt;/p&gt;
+&lt;p&gt;Posterous is dead.&lt;/p&gt;</summary><category term="posterous"></category><category term="android"></category></entry><entry><title>Fear is the mind-killer</title><link href="http://zemanel.eu/fear-is-the-mind-killer.html" rel="alternate"></link><updated>2011-07-03T23:23:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2011-07-03:fear-is-the-mind-killer.html</id><summary type="html">&lt;p&gt;There are many quotes and many pop phrases out there, about fate, love, dating, entrepreneurship. Quotes from famous and not so famous people.&lt;/p&gt;
 &lt;p&gt;The one that always made me think and feel something real and important was "Fear is the mind-killer", which i heard a long time ago during the &lt;a href="http://www.imdb.com/title/tt0087182/"&gt;Dune&lt;/a&gt; and i found out today, it's origin:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I must not fear.&lt;/p&gt;
@@ -34,4 +39,67 @@
 &lt;p&gt;Where the fear has gone there will be nothing.&lt;/p&gt;
 &lt;p&gt;Only I will remain.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;source: &lt;a href="http://en.wikipedia.org/wiki/Bene_Gesserit#Litany_against_fear"&gt;http://en.wikipedia.org/wiki/Bene_Gesserit#Litany_against_fear&lt;/a&gt;&lt;/p&gt;</summary></entry></feed>
+&lt;p&gt;Source: &lt;a href="http://en.wikipedia.org/wiki/Bene_Gesserit#Litany_against_fear"&gt;http://en.wikipedia.org/wiki/Bene_Gesserit#Litany_against_fear&lt;/a&gt;&lt;/p&gt;</summary><category term="Dune"></category><category term="old-posterous"></category></entry><entry><title>Cultural differences</title><link href="http://zemanel.eu/cultural-differences.html" rel="alternate"></link><updated>2011-03-15T22:44:00+00:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2011-03-15:cultural-differences.html</id><summary type="html">&lt;p&gt;I'm on my way back from a small trip to Lisbon, where i attended part of
+a Portuguese Google Technology Users Group, hosted by Google/Paul
+Kinlan, presenting Google Chrome Webstore features. The whole event
+looked yummi.&lt;/p&gt;
+&lt;p&gt;Since i'm from Porto, which is 320km/3h (slow/cheaper) train away from
+Lisbon and $things have been rough, i wasn't intending on showing
+up, but since i got an e-mail from the organization (or someone
+close) to drop by and present something on the developers panel (which
+i'm thankful for), i decided to code something up related to the event,
+minimally interesting,while in a way representing our Northern developer
+community.&lt;/p&gt;
+&lt;p&gt;So, i started coding a Google Chrome, extension to chart browser process
+resources in realtime, since last wednesday, using Dojo 1.6 features and
+Chrome's experimental API's, which ended up being not that bad.&lt;/p&gt;
+&lt;p&gt;The event was supposed to start around 7pm, so i took a train and
+arrived at about 6.30pm. The last train back home was at 9.30pm and
+since i couldn't afford to stay over, i've had asked before and live at
+the event today, to bunk at someone's couch, with no replies, so i had
+to take the train back.&lt;/p&gt;
+&lt;p&gt;Most people started showing up at 7.15/7.30pm and Paul Kinlan's talk at
+about 8pm, when most of the people were at the venue, so i was only able
+to attend about 40m of Paul's talk, which was great.&lt;/p&gt;
+&lt;p&gt;So, basically, i spent most of my last savings and 6h on traveling,
+about 6/8h working on the tech demo, because people weren't kind enough
+to let me drop on their couch for one night.&lt;/p&gt;
+&lt;p&gt;I'm not saying that people are forced to do anything. Probably there
+wasn't even that possibility. And it wasn't a total loss, i learned a
+few stuff on the way, i always do, tech and socially/community wise.&lt;/p&gt;
+&lt;p&gt;Now let me tell you another story. Last year i competed at NodeKO, for
+which i used Dojo as a UI toolkit and was invited by a Sitepen's
+management team, Dylan, to attend a miniconf in London, talk about the
+project and Dojo's use in it. Cash wasn't also abundant at the time, but
+i really wanted to be there, get to know London, the developer
+community, have a nice time and learn new stuff.&lt;/p&gt;
+&lt;p&gt;Since Dylan invited me to bunk at his bunker, you know, because i was
+low on resources and spent a lot of meaningful cash on the trip, i
+bought the plane tickets, took off and had a great time.&lt;/p&gt;
+&lt;p&gt;Other than that, i've even had invitations to bunk at Internet/freenode
+people's bunker a few month's to code on projects, in the Silicon
+forking Valley.&lt;/p&gt;
+&lt;p&gt;I've had guests from New York at my (old) place, which where
+acquaintaces of acquaintaces of freelance partners of mine over the net,
+ that i hardly knew but trusted the referrals, which i took in my own
+home and toured them around the region a couple of full days.&lt;/p&gt;
+&lt;p&gt;It pisses me off, not feeling any kind of support in my own forking
+country.&lt;/p&gt;
+&lt;p&gt;At a tech level, most of the hacker communities, at least around coding
+languages (Java, Python, etc) are dead. Most people don't give a damn.&lt;/p&gt;
+&lt;p&gt;Maybe i'm overreacting, or just acting like a kid or a wave short of a
+ship wreck but all i feel like saying to people around here is "take
+your nose off your own butt and get real".&lt;/p&gt;
+&lt;p&gt;Rant over.&lt;/p&gt;</summary><category term="culture"></category><category term="rant"></category></entry><entry><title>Quotes</title><link href="http://zemanel.eu/quotes.html" rel="alternate"></link><updated>2011-02-12T23:28:00+00:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2011-02-12:quotes.html</id><summary type="html">&lt;p&gt;Quotes are just quotes, but some quotes are more quotable than others.   &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Reasonable men adapt themselves to the world.&lt;/p&gt;
+&lt;p&gt;Unreasonable men adapt the world to themselves.&lt;/p&gt;
+&lt;p&gt;That's why all progress depends on unreasonable men.&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="filosophy"></category></entry><entry><title>Today is Programmer's Day</title><link href="http://zemanel.eu/today-is-programmers-day.html" rel="alternate"></link><updated>2010-09-13T18:17:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2010-09-13:today-is-programmers-day.html</id><summary type="html">&lt;p&gt;Today is Programmer's Day &lt;a href="http://en.wikipedia.org/wiki/Programmers_Day"&gt;http://en.wikipedia.org/wiki/Programmers_Day&lt;/a&gt;&lt;/p&gt;</summary><category term="special-day"></category></entry><entry><title>Hot Linux Jobs</title><link href="http://zemanel.eu/hot-linux-jobs.html" rel="alternate"></link><updated>2010-08-26T21:01:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2010-08-26:hot-linux-jobs.html</id><summary type="html">&lt;p&gt;If you're looking for open source jobs, check out &lt;a href="http://hotlinuxjobs.com"&gt;http://hotlinuxjobs.com&lt;/a&gt; for the USA and &lt;a href="http://linux-lancers.com"&gt;http://linux-lancers.com&lt;/a&gt; for Europe.&lt;/p&gt;
+&lt;p&gt;Drop a mail to Lukas Chaplin (Linux Lancers) lchaplin AT linux-lancers.com&lt;/p&gt;</summary><category term="jobs"></category><category term="old-posterous"></category></entry><entry><title>My new domain, zemanel.eu</title><link href="http://zemanel.eu/my-new-domain-zemanel-eu.html" rel="alternate"></link><updated>2010-08-13T09:35:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2010-08-13:my-new-domain-zemanel-eu.html</id><summary type="html">&lt;p&gt;Registered http://zemanel.eu tonight and moved this Posterous over
+there. Posterous is amazing. I love Posterous. Now i'm just missing over
+9000 entries in my DNS manager to setup Google Apps ...&lt;/p&gt;</summary><category term="posterous"></category></entry><entry><title>Please support SomaFM!</title><link href="http://zemanel.eu/please-suport-soma-fm.html" rel="alternate"></link><updated>2010-07-30T11:38:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2010-07-30:please-suport-soma-fm.html</id><summary type="html">&lt;p&gt;&lt;a href="http://somafm.com/support/"&gt;http://somafm.com/support/&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SomaFM is 19 unique channels of listener-supported, commercial-free, underground/alternative radio broadcasting from San Francisco. All music hand-picked by SomaFM's award-winning DJs and music directors."&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I've been doing my small part, life would be harder without them ...&lt;/p&gt;</summary></entry></feed>
