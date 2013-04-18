@@ -1,0 +1,102 @@
+// Variables
+
+// http://modernl.com/article/web-2.0-colour-palette
+//@secundary-text-color: #36393D;
+//@secundary-text-color: #E75480; //dark pink
+@secundary-text-color: #3F4C6B; // Mozilla blue
+
+// mixins
+
+.divider {
+  border-bottom: 1px solid #EEEEEE;
+  margin: 10px 0;
+}
+
+// General site styles
+body {
+  background-color: #E8E8E8;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: @secundary-text-color;
+}
+a {
+  color: @secundary-text-color;
+}
+a:hover, a:focus {
+  color: @secundary-text-color;
+  .opacity(70);
+  text-decoration: none;
+}
+ul {
+  list-style: square;
+}
+// Navigation
+header {
+  margin-top: 10px;
+  .nav {
+    text-align:right;
+    line-height: 30px;
+    a {
+      text-decoration: none;
+      padding-right: 10px;
+    }
+    a:hover, a:focus {
+    }
+  }
+}
+// Sidebar
+#sidebar {
+
+  .nav a {
+    margin-top: 5px;
+  }
+}
+#avatar {
+  margin-bottom: 10px;
+  img {
+    .border-radius(3px);
+  }
+}
+
+// Content
+.content {
+  background-color: #FFFFFF;
+  .border-radius(1px);
+  .inner {
+    padding: 10px;
+  }
+  .title {
+    .divider;
+  }
+  // article
+  .article {
+    .metadata a {
+      padding: 0 5px 0 5px;
+    }
+    .summary {
+      margin-top: 10px;
+    }
+    .post {
+      margin-top: 20px;
+    }
+    .more {
+      font-weight: bolder;
+      text-transform: capitalize;
+      margin-top: 10px;
+    }
+    .codehilite {
+      pre {
+        background-color: #EEEEEE;
+        border: 0;
+      }
+    }
+  }
+}
+
+// Footer
+
+footer p {
+  text-align: right;
+  padding: 10px;
+}
+
