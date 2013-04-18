@@ -19,7 +19,6 @@
         <header>
             <div class="nav">
                 <i class="icon-home"></i> <a href="{{ SITEURL }}/index.html">Home</a>
-                <a class="icon" href="{{ SITEURL }}/feeds/all.atom.xml">RSS</a>
                 {% if DISPLAY_PAGES_ON_MENU %}
                 {% for page in PAGES %}
                 <i class="icon-book"></i> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
@@ -57,6 +56,7 @@
             <p><small>
                 <a href="{{ SITEURL }}/index.html">{{ SITENAME }} ({{ SITEDSN }})</a>,
                 a <a href="http://docs.getpelican.com">Pelican</a> blog by &copy; {{ AUTHOR }} 2013
+                <a class="icon" href="{{ SITEURL }}/feeds/all.atom.xml">RSS</a>
             </small>
             </p>
         </footer>
