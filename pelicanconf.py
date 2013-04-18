@@ -7,10 +7,10 @@ SITEDIR = os.path.abspath(os.path.dirname(__file__))
 
 AUTHOR = u'Jos\xe9 Moreira'
 SITENAME = u'There And Back'
-SITEURL = 'http://www.zemanel.eu'
+SITEURL = 'http:/blog.zemanel.eu'
 RELATIVE_URLS = True
 
-SITEDSN = 'www.zemanel.eu'  # custom setting
+SITEDSN = 'blog.zemanel.eu'  # custom setting
 
 FEED_DOMAIN = SITEURL
 TIMEZONE = 'Europe/Lisbon'
@@ -55,6 +55,10 @@ DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_PATH = os.path.join(SITEDIR, '_output')
 ARTICLE_DIR = 'articles'
 PAGE_DIR = 'pages'
+
+FILES_TO_COPY = (
+    ('CNAME', 'CNAME'),
+)
 
 # Social
 TWITTER_USERNAME = 'zemanel'
