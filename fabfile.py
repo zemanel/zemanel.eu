@@ -54,5 +54,6 @@ def publish():
     """
     Publish content
     """
+    html()
     local('ghp-import _output')
     local('git push origin gh-pages')
