@@ -7,10 +7,10 @@ SITEDIR = os.path.abspath(os.path.dirname(__file__))
 
 AUTHOR = u'Jos\xe9 Moreira'
 SITENAME = u'There And Back'
-SITEURL = 'http:/blog.zemanel.eu'
+SITEURL = 'http://www.zemanel.eu'
 RELATIVE_URLS = True
 
-SITEDSN = 'blog.zemanel.eu'  # custom setting
+SITEDSN = 'www.zemanel.eu'  # custom setting
 
 FEED_DOMAIN = SITEURL
 TIMEZONE = 'Europe/Lisbon'
