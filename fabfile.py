@@ -48,3 +48,10 @@ def serve():
     Start http-serving content
     """
     local('honcho start')
+
+def publish():
+    """
+    Publish content
+    """
+    local('ghp-import _output')
+    local('git push origin gh-pages')

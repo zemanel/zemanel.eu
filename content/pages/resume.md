@@ -1,7 +1,6 @@
 Title: Resume
-
-About
------
+Date: 2013-04-17 22:00
+Modified: 2013-04-17 23:00
 
 Software developer with a background of PHP, Python backend and frontend Javascript database driven web application development.
 

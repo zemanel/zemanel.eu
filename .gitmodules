@@ -3,4 +3,4 @@
 	url = git://github.com/twitter/bootstrap.git
 [submodule "vendor/pelican_plugins"]
 	path = vendor/pelican_plugins
-	url = git@github.com:zemanel/pelican-plugins.git
+	url = git://github.com/getpelican/pelican-plugins.git
