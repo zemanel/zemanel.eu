@@ -53,7 +53,9 @@ DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_PATH = os.path.join(SITEDIR, '_output')
 ARTICLE_DIR = 'articles'
 PAGE_DIR = 'pages'
-
+DIRECT_TEMPLATES = (
+    ('index', 'tags', 'categories', 'archives', '404')
+)
 FILES_TO_COPY = (
     ('CNAME', 'CNAME'),
     ('favicon.ico', 'favicon.ico'),
