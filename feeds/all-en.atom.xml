@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/all-en.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-17T22:00:00+01:00</updated><entry><title>Hello World.</title><link href="http://zemanel.eu/hello-world.html" rel="alternate"></link><updated>2013-04-17T22:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-17:hello-world.html</id><summary type="html">&lt;p&gt;With Python 2.x&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hello world!&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;With Python 3.x&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;hello world!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;With Javacript on the browser&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hello world&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;With Node.js&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hello world&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="universe"></category><category term="1st-post"></category></entry><entry><title>Hello World.</title><link href="http://zemanel.eu/hello-world-2.html" rel="alternate"></link><updated>2013-04-17T03:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-17:hello-world-2.html</id><summary type="html">&lt;p&gt;&lt;img alt="Alt Text" src="/images/test.js" /&gt;&lt;/p&gt;
-&lt;p&gt;With Python 2.x&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/all-en.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-18T06:00:00+01:00</updated><entry><title>Hello World.</title><link href="http://zemanel.eu/hello-world.html" rel="alternate"></link><updated>2013-04-18T06:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-18:hello-world.html</id><summary type="html">&lt;p&gt;With Python 2.x&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hello again!&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -34,22 +16,22 @@
 
 &lt;p&gt;With Node.js&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hello again&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="universe"></category><category term="1st-post"></category></entry><entry><title>Hello World 3.</title><link href="http://zemanel.eu/hello-world-3.html" rel="alternate"></link><updated>2013-04-17T03:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-17:hello-world-3.html</id><summary type="html">&lt;p&gt;&lt;img alt="Alt Text" src="/images/test.js" /&gt;&lt;/p&gt;
-&lt;p&gt;With Python 2.x&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hello again!&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;With Python 3.x&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;hello again!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;With Javacript on the browser&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hello again&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;With Node.js&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hello again&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="universe"></category></entry></feed>
+&lt;p&gt;Starting a new blog based on &lt;a href="http://getpelican.com"&gt;Pelican&lt;/a&gt; and will import some older posts from my old Posterous-dead website.&lt;/p&gt;
+&lt;p&gt;I'm a Python/Javascript developer, Linux/OSX lover with a thing for devops. There are some cool posts i intend to write, for example how to write better code when you're not a rockstar, how to run applications on &lt;a href="http://openshift.com"&gt;OpenShift&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I'm also a Django developer (write web applications with Django, not a commiter) and love &lt;a href="http://dojotoolkit.com"&gt;Dojo Toolkit&lt;/a&gt;, so i hope to write more about those as well.&lt;/p&gt;
+&lt;p&gt;That is all, have fun!&lt;/p&gt;</summary><category term="no-real-content-yet-dept"></category></entry><entry><title>Fear is the mind-killer</title><link href="http://zemanel.eu/fear-is-the-mind-killer.html" rel="alternate"></link><updated>2011-07-03T23:23:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2011-07-03:fear-is-the-mind-killer.html</id><summary type="html">&lt;p&gt;There are many quotes and many pop phrases out there, about fate, love, dating, entrepreneurship. Quotes from famous and not so famous people.&lt;/p&gt;
+&lt;p&gt;The one that always made me think and feel something real and important was "Fear is the mind-killer", which i heard a long time ago during the &lt;a href="http://www.imdb.com/title/tt0087182/"&gt;Dune&lt;/a&gt; and i found out today, it's origin:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I must not fear.&lt;/p&gt;
+&lt;p&gt;Fear is the mind-killer.&lt;/p&gt;
+&lt;p&gt;Fear is the little-death that brings total obliteration.&lt;/p&gt;
+&lt;p&gt;I will face my fear.&lt;/p&gt;
+&lt;p&gt;I will permit it to pass over me and through me.&lt;/p&gt;
+&lt;p&gt;And when it has gone past I will turn the inner eye to see its path.&lt;/p&gt;
+&lt;p&gt;Where the fear has gone there will be nothing.&lt;/p&gt;
+&lt;p&gt;Only I will remain.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;source: &lt;a href="http://en.wikipedia.org/wiki/Bene_Gesserit#Litany_against_fear"&gt;http://en.wikipedia.org/wiki/Bene_Gesserit#Litany_against_fear&lt;/a&gt;&lt;/p&gt;</summary></entry></feed>

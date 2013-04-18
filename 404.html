@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="José Moreira">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" />
 
         <link rel="stylesheet" href="./theme/css/main.css?3f6e3d99">
     
@@ -45,36 +46,42 @@
             <!-- content -->
             <div class="content span10">
                 <div class="inner">
-                    	<div class="article">
-		<div class="title"><h2>Hello World 3.</h2></div>
-		<div class="metadata"><p>
-    <strong>created</strong> <a href="./hello-world-3.html">2013-04-17 03:00:00</a>
-        <i class="icon-folder-close"></i> <strong>category</strong> <a href="./category/category2.html">category2</a>
-    <i class="icon-tag"></i> <strong>tags</strong>     <a href="./tag/universe.html">universe</a></p></div>
-		<div class="post"><p><img alt="Alt Text" src="/images/test.js" /></p>
-<p>With Python 2.x</p>
-<div class="highlight"><pre><span class="k">print</span> <span class="s">&#39;hello again!&#39;</span>
-</pre></div>
+                    <h1>Whoops! Something is just wrooong ...</h1>
 
+<p>
+    You got served an <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">RFC 2616 -- Hypertext Transfer Protocol -- HTTP/1.1</a>
+    <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1">Status-Code</a>, the <strong>404</strong>
+</p>
 
-<p>With Python 3.x</p>
-<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&#39;hello again!&#39;</span><span class="p">)</span>
-</pre></div>
+<h2>User Self-Help</h2>
 
+<h3>Relevant definitions from RFC 2616</h3>
 
-<p>With Javacript on the browser</p>
-<div class="highlight"><pre><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;hello again&#39;</span><span class="p">);</span>
-</pre></div>
+<dl>
+    <dt><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1">Status-Code</a></dt>
+    <dd>
+        <blockquote>
+            The Status-Code element is a 3-digit integer result code of the attempt to understand and satisfy the request. These codes are fully defined in section 10. The Reason-Phrase is intended to give a short textual description of the Status-Code. The Status-Code is intended for use by automata and the Reason-Phrase is intended for the human user. The client is not required to examine or display the Reason- Phrase.
+    </blockquote>
+    </dd>
 
+    <dt><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1.2">Request-URI</a></dt>
+    <dd>
+        <blockquote>
+            The Request-URI is a Uniform Resource Identifier (section 3.2) and identifies the resource upon which to apply the request. ...
+        </blockquote>
 
-<p>With Node.js</p>
-<div class="highlight"><pre><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hello again&#39;</span><span class="p">);</span>
-</pre></div></div>
-		<div class="comments">
-			<h2>Comments</h2>
-		 	<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="zemanel">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-								</div>
-	</div>	
+    </dd>
+
+    <dt><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">Status-Code 404</a></dt>
+    <dd>
+        <blockquote>
+            The server has not found anything matching the Request-URI. No indication is given of whether the condition is temporary or permanent. The 410 (Gone) status code SHOULD be used if the server knows, through some internally configurable mechanism, that an old resource is permanently unavailable and has no forwarding address. This status code is commonly used when the server does not wish to reveal exactly why the request has been refused, or when no other response is applicable.
+        </blockquote>
+    </dd>
+</dl>
+
+<p>Good Luck!</p>
                 </div>
             </div>
         </div>
