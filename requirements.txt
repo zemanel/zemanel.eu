@@ -15,3 +15,8 @@ honcho==0.4.0
 # quality check
 http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz#egg=closure_linter
 flake8==2.0
+
+## Deploy
+
+# for Github project pages
+ghp-import==0.2.2
