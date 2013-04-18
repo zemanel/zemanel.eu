@@ -9,6 +9,7 @@ AUTHOR = u'Jos\xe9 Moreira'
 SITENAME = u'There And Back'
 SITEURL = 'http://zemanel.eu'
 RELATIVE_URLS = True
+GOOGLE_ANALYTICS = 'UA-26838427-1'
 
 SITEDSN = 'zemanel.eu'  # custom setting
 
