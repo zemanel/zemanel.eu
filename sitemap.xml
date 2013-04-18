@@ -4,92 +4,92 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http:/blog.zemanel.eu/index.html</loc>
-<lastmod>2013-04-18T04:48:21-00:00</lastmod>
+<loc>http://zemanel.eu/index.html</loc>
+<lastmod>2013-04-18T05:14:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/archives.html</loc>
-<lastmod>2013-04-18T04:48:21-00:00</lastmod>
+<loc>http://zemanel.eu/archives.html</loc>
+<lastmod>2013-04-18T05:14:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/tags.html</loc>
-<lastmod>2013-04-18T04:48:21-00:00</lastmod>
+<loc>http://zemanel.eu/tags.html</loc>
+<lastmod>2013-04-18T05:14:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/categories.html</loc>
-<lastmod>2013-04-18T04:48:21-00:00</lastmod>
+<loc>http://zemanel.eu/categories.html</loc>
+<lastmod>2013-04-18T05:14:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/pages/resume.html</loc>
+<loc>http://zemanel.eu/pages/resume.html</loc>
 <lastmod>2013-04-17T22:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/hello-world.html</loc>
+<loc>http://zemanel.eu/hello-world.html</loc>
 <lastmod>2013-04-17T22:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/hello-world-2.html</loc>
+<loc>http://zemanel.eu/hello-world-2.html</loc>
 <lastmod>2013-04-17T03:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/hello-world-3.html</loc>
+<loc>http://zemanel.eu/hello-world-3.html</loc>
 <lastmod>2013-04-17T03:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/category/category2.html</loc>
-<lastmod>2013-04-18T04:48:21-00:00</lastmod>
+<loc>http://zemanel.eu/category/category2.html</loc>
+<lastmod>2013-04-18T05:14:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/category/programming.html</loc>
-<lastmod>2013-04-18T04:48:21-00:00</lastmod>
+<loc>http://zemanel.eu/category/programming.html</loc>
+<lastmod>2013-04-18T05:14:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/tag/universe.html</loc>
-<lastmod>2013-04-18T04:48:21-00:00</lastmod>
+<loc>http://zemanel.eu/tag/universe.html</loc>
+<lastmod>2013-04-18T05:14:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/tag/1st-post.html</loc>
-<lastmod>2013-04-18T04:48:21-00:00</lastmod>
+<loc>http://zemanel.eu/tag/1st-post.html</loc>
+<lastmod>2013-04-18T05:14:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http:/blog.zemanel.eu/author/jose-moreira.html</loc>
-<lastmod>2013-04-18T04:48:21-00:00</lastmod>
+<loc>http://zemanel.eu/author/jose-moreira.html</loc>
+<lastmod>2013-04-18T05:14:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
