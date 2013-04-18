@@ -56,6 +56,7 @@ PAGE_DIR = 'pages'
 
 FILES_TO_COPY = (
     ('CNAME', 'CNAME'),
+    ('favicon.ico', 'favicon.ico'),
 )
 
 # Social
