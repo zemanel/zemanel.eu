@@ -63,6 +63,7 @@ FILES_TO_COPY = (
 
 # Social
 TWITTER_USERNAME = 'zemanel'
+DISQUS_SITENAME = 'zemaneleu'
 SOCIAL = (
     ('Twitter', 'http://twitter.com/zemanel'),
     ('Github', 'http://github.com/zemanel'),
