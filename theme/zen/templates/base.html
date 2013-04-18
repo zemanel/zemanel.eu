@@ -19,15 +19,15 @@
     <div class="container">
         <header>
             <div class="nav">
-                <i class="icon-home"></i> <a href="{{ SITEURL }}/index.html">Home</a>
+                <a class="btn btn-small btn-inverse active" href="{{ SITEURL }}/index.html"><i class="icon-white icon-home"></i> Home</a>
                 {% if DISPLAY_PAGES_ON_MENU %}
                 {% for page in PAGES %}
-                <i class="icon-book"></i> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+                <a class="btn btn-small btn-inverse active" href="{{ SITEURL }}/{{ page.url }}"><i class="icon-white icon-book"></i> {{ page.title }}</a>
                 {% endfor %}
                 {% endif %}
-                <i class="icon-briefcase"></i> <a href="{{ SITEURL }}/archives.html">Archives</a>
-                <i class="icon-folder-close"></i> <a href="{{ SITEURL }}/categories.html">Categories</a>
-                <i class="icon-tag"></i> <a href="{{ SITEURL }}/tags.html">Tags</a>
+                <a class="btn btn-small btn-inverse active" href="{{ SITEURL }}/archives.html"><i class="icon-white icon-briefcase"></i> Archives</a>
+                <a class="btn btn-small btn-inverse active" href="{{ SITEURL }}/categories.html"><i class="icon-white icon-folder-close"></i> Categories</a>
+                <a class="btn btn-small btn-inverse active" href="{{ SITEURL }}/tags.html"><i class="icon-white icon-tag"></i> Tags</a>
             </div>
         </header>
         <div class="row">
