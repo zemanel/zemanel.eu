@@ -1,0 +1,17 @@
+# Python dependencies
+#
+
+#pelican==3.1.1
+-e git+git://github.com/getpelican/pelican.git@8be7c0dbae5bd094379d74fd47acb41a56f18afd#egg=pelican
+
+Markdown==2.3.1
+webassets==0.8
+py_w3c==0.1.0
+
+# devops
+Fabric==1.6.0
+honcho==0.4.0
+
+# quality check
+http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz#egg=closure_linter
+flake8==2.0
