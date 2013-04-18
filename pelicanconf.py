@@ -8,14 +8,11 @@ SITEDIR = os.path.abspath(os.path.dirname(__file__))
 AUTHOR = u'Jos\xe9 Moreira'
 SITENAME = u'There And Back'
 SITEURL = 'http://zemanel.eu'
+SITEDSN = 'zemanel.eu'  # custom setting
 RELATIVE_URLS = True
 GOOGLE_ANALYTICS = 'UA-26838427-1'
-
-SITEDSN = 'zemanel.eu'  # custom setting
-
 FEED_DOMAIN = SITEURL
 TIMEZONE = 'Europe/Lisbon'
-GOOGLE_ANALYTICS = ''
 DEFAULT_LANG = u'en'
 
 # Plugins
