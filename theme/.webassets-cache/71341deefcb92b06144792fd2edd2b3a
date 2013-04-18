@@ -5334,6 +5334,9 @@ header .nav a {
   background-color: #EEEEEE;
   border: 0;
 }
+.content .page .metadata {
+  margin-bottom: 20px;
+}
 footer p {
   text-align: right;
   padding: 10px;
