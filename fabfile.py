@@ -49,6 +49,7 @@ def serve():
     """
     local('honcho start')
 
+
 def publish():
     """
     Publish content
