@@ -1,4 +1,4 @@
-Title: Writing better code Javascript even when you're not a rockstar
+Title: Writing better Javascript code even when you're not a rockstar
 Date: 2013-04-19 01:00
 Tags: code-better, javascript
 Slug: writing-better-code-even-when-youre-not-a-rockstar
@@ -9,7 +9,7 @@ Even if you're not a rockstar developer, there are ways to easily produce better
 
 ### Improving Javascript source code with Google Closure Tools
 
-There are several Javascript source code linters available. The one i have bee working with is [Closure Linter](https://developers.google.com/closure/utilities/) wich is part of [Google Closure Tools](https://developers.google.com/closure/).
+There are several Javascript source code linters available. The one i have been working with is [Closure Linter](https://developers.google.com/closure/utilities/) which is part of [Google Closure Tools](https://developers.google.com/closure/).
 
 #### About the Closure Linter
 
@@ -17,13 +17,13 @@ From <https://developers.google.com/closure/utilities/>
 
 > The Closure Linter ensures that all of your project's JavaScript code follows the guidelines in the [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml). It can also automatically fix many common errors, which saves you time and lets you focus on coding.
 
-Closure Linter is a Python library that also adds a couple of command-line utilities to out toolbelt, `gjslint` for Javascript source code lintint and `fixjsstyle` to automatically apply corrections to them.  
+Closure Linter is a Python library that also adds a couple of command-line utilities to our toolbelt, `gjslint` for Javascript source code linting and `fixjsstyle` to automatically apply corrections to them.
 
 #### Installing
 
-The Closure Linter can be obtained on the Google Code project page, in the downloads section <https://code.google.com/p/closure-linter/downloads/>. It's Python package, so let's use `pip` to install it on a fresh Python virtual environment:
+The Closure Linter can be obtained on the Google Code project page, in the downloads section <https://code.google.com/p/closure-linter/downloads/>. It's a Python package, so let's use `pip` to install it on a fresh Python virtual environment:
     
-let's create a fresh virtual enviroment
+Let's create a fresh virtual enviroment
 
     :::console
     zemanel@victory ? WorkDir  mkvirtualenv blogging
@@ -49,7 +49,7 @@ and `pip` install the package
      Successfully installed python-gflags closure-linter
      Cleaning up...
 
-Our test script will be *CloudAppSelectAllItems.js*, a <https://gist.github.com/zemanel/4974451> i created to to mass deletion of uploads on <http://GetCloudApp.com>.
+Our test script will be *CloudAppSelectAllItems.js*, a <https://gist.github.com/zemanel/4974451> i created to do mass deletion of uploads on <http://GetCloudApp.com>
 
     :::javascript
     /*
@@ -78,7 +78,7 @@ Our test script will be *CloudAppSelectAllItems.js*, a <https://gist.github.com/
     // #4 Refresh page or whatever
     // #5 GOTO 1
 
-Let's apply `gjslint` to the script and behold, crappy formatted code:
+Let's apply `gjslint` to the script and behold, badly formatted code
 
     :::shell
     (blogging)zemanel at victory on WorkDir  gjslint CloudAppSelectAllItems.js
@@ -99,14 +99,14 @@ Let's apply `gjslint` to the script and behold, crappy formatted code:
 
     fixjsstyle CloudAppSelectAllItems.js
 
-The script analyzed out script and warned about 8 errors. At this we can either apply the corrections ourselves and iterate until it's all good or, as stated on the last message we can apply the `fixjsstyle` script to it. Let's try that:
+It analyzed our script and warned about 8 errors. At this point we can either apply the corrections ourselves and iterate until it's all good or, as stated on the last message, we can apply `fixjsstyle` to it. Let's try that
 
     :::shell
     (blogging)zemanel at victory on WorkDir  fixjsstyle CloudAppSelectAllItems.js
     Fixed 6 errors in /Users/zemanel/WorkDir/CloudAppSelectAllItems.js
 
 
-6 of the 8 errors were corrected automatically by the script. Re-running the linter we get:
+We can see that 6 of the 8 errors were corrected automatically by the script. Re-running the linter we get:
 
     :::shell
     (blogging)zemanel at victory on WorkDir  fixjsstyle CloudAppSelectAllItems.js
@@ -123,7 +123,7 @@ The script analyzed out script and warned about 8 errors. At this we can either 
 
     fixjsstyle CloudAppSelectAllItems.js
 
-The remaning warnings are related to 80 column line length. After manual editing the javascript source, we have this result:
+The remaning warnings are related to 80 column line length. After manual editing the javascript source, we have this result
 
     :::javascript
     /*
@@ -154,7 +154,7 @@ The remaning warnings are related to 80 column line length. After manual editing
     // #4 Refresh page or whatever
     // #5 GOTO 1
 
-Running the linting tool again, we're in the clear:
+Can you spot the differences ? Now imagine "finding Wally" on a 1k LOC file. Running the linting tool again, we're in the clear
 
     :::shell
     (blogging)zemanel at victory on WorkDir  gjslint CloudAppSelectAllItems.js
@@ -202,7 +202,7 @@ Obviously this was a very simple, with hardly noticeable differentes between ver
 
 The script can also be customized with command-line parameters, for which the list can be obtained with `gjslint --help` and can check even JSDoc validity.
 
-The case in point is that an apparently simple script, triggered 8 violations of the formatting coding standard. Automating the linting process as part of a development workflow either manually, source control hooks or CI automated builds, will greatly increase the quality of any project, at a very small cost.
+The case in point is that an apparently simple script, triggered 8 violations of the formatting coding standard. Automating the linting process as part of a development workflow either manually, through source control hooks or CI automated builds, will greatly increase the quality of any project, at a very small cost.
 
 
 
