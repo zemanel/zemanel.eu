@@ -1,5 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/all-en.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-18T06:00:00+01:00</updated><entry><title>Hello World.</title><link href="http://zemanel.eu/hello-world.html" rel="alternate"></link><updated>2013-04-18T06:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-18:hello-world.html</id><summary type="html">&lt;p&gt;With Python 2.x&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/all-en.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-19T01:00:00+01:00</updated><entry><title>Writing better code Javascrit even when you're not a rockstar</title><link href="http://zemanel.eu/writing-better-code-even-when-youre-not-a-rockstar.html" rel="alternate"></link><updated>2013-04-19T01:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-19:writing-better-code-even-when-youre-not-a-rockstar.html</id><summary type="html">&lt;p&gt;Even if you're not a rockstar developer, there are ways to easily produce better code while learning new tricks, using freely available tools that, aditionally, can automate source code inspections.&lt;/p&gt;
+&lt;h3&gt;Improving Javascript source code with Google Closure Tools&lt;/h3&gt;
+&lt;p&gt;There are several Javascript source code linters available. The one i have bee working with is &lt;a href="https://developers.google.com/closure/utilities/"&gt;Closure Linter&lt;/a&gt; wich is part of &lt;a href="https://developers.google.com/closure/"&gt;Google Closure Tools&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;About the Closure Linter&lt;/h4&gt;
+&lt;p&gt;From &lt;a href="https://developers.google.com/closure/utilities/"&gt;https://developers.google.com/closure/utilities/&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Closure Linter ensures that all of your project's JavaScript code follows the guidelines in the &lt;a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml"&gt;Google JavaScript Style Guide&lt;/a&gt;. It can also automatically fix many common errors, which saves you time and lets you focus on coding.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Closure Linter is a Python library that also adds a couple of command-line utilities to out toolbelt, &lt;code&gt;gjslint&lt;/code&gt; for Javascript source code lintint and &lt;code&gt;fixjsstyle&lt;/code&gt; to automatically apply corrections to them.  &lt;/p&gt;
+&lt;h4&gt;Installing&lt;/h4&gt;
+&lt;p&gt;The Closure Linter can be obtained on the Google Code project page, in the downloads section &lt;a href="https://code.google.com/p/closure-linter/downloads/"&gt;https://code.google.com/p/closure-linter/downloads/&lt;/a&gt;. It's Python package, so let's use &lt;code&gt;pip&lt;/code&gt; to install it on a fresh Python virtual environment:&lt;/p&gt;
+&lt;p&gt;let's create a fresh virtual enviroment&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;zemanel@victory ? WorkDir  mkvirtualenv blogging&lt;/span&gt;
+&lt;span class="go"&gt;New python executable in blogging/bin/python&lt;/span&gt;
+&lt;span class="go"&gt;Installing setuptools............done.&lt;/span&gt;
+&lt;span class="go"&gt;Installing pip...............done.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and &lt;code&gt;pip&lt;/code&gt; install the package&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;(blogging)zemanel@victory on WorkDir  pip install https://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz&lt;/span&gt;
+&lt;span class="go"&gt; Downloading/unpacking https://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz&lt;/span&gt;
+&lt;span class="go"&gt;  Downloading closure_linter-latest.tar.gz (88kB): 88kB downloaded&lt;/span&gt;
+&lt;span class="go"&gt;  Running setup.py egg_info for package from https://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz&lt;/span&gt;
+&lt;span class="go"&gt; Downloading/unpacking python-gflags (from closure-linter==2.3.9)&lt;/span&gt;
+&lt;span class="go"&gt;  Running setup.py egg_info for package python-gflags&lt;/span&gt;
+&lt;span class="go"&gt; Installing collected packages: python-gflags, closure-linter&lt;/span&gt;
+&lt;span class="go"&gt;  Running setup.py install for python-gflags&lt;/span&gt;
+&lt;span class="go"&gt;  Running setup.py install for closure-linter&lt;/span&gt;
+&lt;span class="go"&gt;    Installing fixjsstyle script to /Users/zemanel/.virtualenvs/blogging/bin&lt;/span&gt;
+&lt;span class="go"&gt;    Installing gjslint script to /Users/zemanel/.virtualenvs/blogging/bin&lt;/span&gt;
+&lt;span class="go"&gt; Successfully installed python-gflags closure-linter&lt;/span&gt;
+&lt;span class="go"&gt; Cleaning up...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Our test script will be &lt;em&gt;CloudAppSelectAllItems.js&lt;/em&gt;, a &lt;a href="https://gist.github.com/zemanel/4974451"&gt;https://gist.github.com/zemanel/4974451&lt;/a&gt; i created to to mass deletion of uploads on &lt;a href="http://GetCloudApp.com"&gt;http://GetCloudApp.com&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt; * Checks all list items on http://getcloudapp.com upload list,&lt;/span&gt;
+&lt;span class="cm"&gt; *  which is useful for multiple item deletion (AKA nuke the crap of all the uploads)&lt;/span&gt;
+&lt;span class="cm"&gt; *&lt;/span&gt;
+&lt;span class="cm"&gt; * License:&lt;/span&gt;
+&lt;span class="cm"&gt; * José Moreira, in 2013 and beyond, doesn&amp;#39;t care what you do with this piece of code.&lt;/span&gt;
+&lt;span class="cm"&gt; *&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;items&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;$$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ol#listing input[type=&amp;quot;checkbox&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;//  check all items&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;click&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;})();&lt;/span&gt;
+
+&lt;span class="c1"&gt;// #1 click &amp;quot;Delete Selected&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;// #2 ...&lt;/span&gt;
+&lt;span class="c1"&gt;// #3 Profit !&lt;/span&gt;
+&lt;span class="c1"&gt;// #4 Refresh page or whatever&lt;/span&gt;
+&lt;span class="c1"&gt;// #5 GOTO 1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Let's apply &lt;code&gt;gjslint&lt;/code&gt; to the script and behold, crappy formatted code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;victory&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;WorkDir&lt;/span&gt;  &lt;span class="n"&gt;gjslint&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="o"&gt;-----&lt;/span&gt; &lt;span class="kt"&gt;FILE&lt;/span&gt;  &lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WorkDir&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="o"&gt;-----&lt;/span&gt;
+&lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;0110&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="n"&gt;too&lt;/span&gt; &lt;span class="kt"&gt;long&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;85&lt;/span&gt; &lt;span class="n"&gt;characters&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
+&lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;0001&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Extra&lt;/span&gt; &lt;span class="n"&gt;space&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;
+&lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;0110&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="n"&gt;too&lt;/span&gt; &lt;span class="kt"&gt;long&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;87&lt;/span&gt; &lt;span class="n"&gt;characters&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
+&lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;0001&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Extra&lt;/span&gt; &lt;span class="n"&gt;space&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;
+&lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;0002&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Missing&lt;/span&gt; &lt;span class="n"&gt;space&lt;/span&gt; &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;{&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;0002&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Missing&lt;/span&gt; &lt;span class="n"&gt;space&lt;/span&gt; &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;=&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;0002&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Missing&lt;/span&gt; &lt;span class="n"&gt;space&lt;/span&gt; &lt;span class="n"&gt;after&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;=&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;0001&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Extra&lt;/span&gt; &lt;span class="n"&gt;space&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;
+&lt;span class="n"&gt;Found&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;including&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="n"&gt;OK&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
+
+&lt;span class="n"&gt;Some&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="n"&gt;reported&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;GJsLint&lt;/span&gt; &lt;span class="n"&gt;may&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="k"&gt;auto&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fixable&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt;
+&lt;span class="n"&gt;fixjsstyle&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Please&lt;/span&gt; &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;check&lt;/span&gt; &lt;span class="n"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;makes&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;report&lt;/span&gt; &lt;span class="n"&gt;any&lt;/span&gt; &lt;span class="n"&gt;bugs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt;
+&lt;span class="n"&gt;script&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;executing&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+
+&lt;span class="n"&gt;fixjsstyle&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The script analyzed out script and warned about 8 errors. At this we can either apply the corrections ourselves and iterate until it's all good or, as stated on the last message we can apply the &lt;code&gt;fixjsstyle&lt;/code&gt; script to it. Let's try that:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;victory&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;WorkDir&lt;/span&gt;  &lt;span class="n"&gt;fixjsstyle&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="n"&gt;Fixed&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WorkDir&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;6 of the 8 errors were corrected automatically by the script. Re-running the linter we get:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;victory&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;WorkDir&lt;/span&gt;  &lt;span class="n"&gt;fixjsstyle&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="n"&gt;Fixed&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WorkDir&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;victory&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;WorkDir&lt;/span&gt;  &lt;span class="n"&gt;gjslint&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="o"&gt;-----&lt;/span&gt; &lt;span class="kt"&gt;FILE&lt;/span&gt;  &lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WorkDir&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="o"&gt;-----&lt;/span&gt;
+&lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;0110&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="n"&gt;too&lt;/span&gt; &lt;span class="kt"&gt;long&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;85&lt;/span&gt; &lt;span class="n"&gt;characters&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
+&lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;0110&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="n"&gt;too&lt;/span&gt; &lt;span class="kt"&gt;long&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;87&lt;/span&gt; &lt;span class="n"&gt;characters&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
+&lt;span class="n"&gt;Found&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;including&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="n"&gt;OK&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
+
+&lt;span class="n"&gt;Some&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="n"&gt;reported&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;GJsLint&lt;/span&gt; &lt;span class="n"&gt;may&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="k"&gt;auto&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fixable&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt;
+&lt;span class="n"&gt;fixjsstyle&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Please&lt;/span&gt; &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;check&lt;/span&gt; &lt;span class="n"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;makes&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;report&lt;/span&gt; &lt;span class="n"&gt;any&lt;/span&gt; &lt;span class="n"&gt;bugs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt;
+&lt;span class="n"&gt;script&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;executing&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+
+&lt;span class="n"&gt;fixjsstyle&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The remaning warnings are related to 80 column line length. After manual editing the javascript source, we have this result:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt; * Checks all list items on http://getcloudapp.com upload list,&lt;/span&gt;
+&lt;span class="cm"&gt; *  which is useful for multiple item deletion (AKA nuke the crap of&lt;/span&gt;
+&lt;span class="cm"&gt; *  all the uploads)&lt;/span&gt;
+&lt;span class="cm"&gt; *&lt;/span&gt;
+&lt;span class="cm"&gt; * License:&lt;/span&gt;
+&lt;span class="cm"&gt; * José Moreira, in 2013 and beyond, doesn&amp;#39;t care what you do with&lt;/span&gt;
+&lt;span class="cm"&gt; * this piece of code.&lt;/span&gt;
+&lt;span class="cm"&gt; *&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;items&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;$$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ol#listing input[type=&amp;quot;checkbox&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;//  check all items&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;click&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;})();&lt;/span&gt;
+
+&lt;span class="c1"&gt;// #1 click &amp;quot;Delete Selected&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;// #2 ...&lt;/span&gt;
+&lt;span class="c1"&gt;// #3 Profit !&lt;/span&gt;
+&lt;span class="c1"&gt;// #4 Refresh page or whatever&lt;/span&gt;
+&lt;span class="c1"&gt;// #5 GOTO 1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Running the linting tool again, we're in the clear:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;victory&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;WorkDir&lt;/span&gt;  &lt;span class="n"&gt;gjslint&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="n"&gt;checked&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="n"&gt;found&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Obviously this was a very simple, with hardly noticeable differentes between versions, but here's a &lt;code&gt;diff -u&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gd"&gt;--- CloudAppSelectAllItems.js   2013-04-19 02:50:56.000000000 +0100&lt;/span&gt;
+&lt;span class="gi"&gt;+++ CloudAppSelectAllItems-linted.js    2013-04-19 02:53:05.000000000 +0100&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -1,18 +1,20 @@&lt;/span&gt;
+ /*
+  * Checks all list items on http://getcloudapp.com upload list,
+&lt;span class="gd"&gt;- *  which is useful for multiple item deletion (AKA nuke the crap of all the uploads)&lt;/span&gt;
+&lt;span class="gd"&gt;- *&lt;/span&gt;
+&lt;span class="gi"&gt;+ *  which is useful for multiple item deletion (AKA nuke the crap of&lt;/span&gt;
+&lt;span class="gi"&gt;+ *  all the uploads)&lt;/span&gt;
+&lt;span class="gi"&gt;+ *&lt;/span&gt;
+  * License:
+&lt;span class="gd"&gt;- * José Moreira, in 2013 and beyond, doesn&amp;#39;t care what you do with this piece of code.&lt;/span&gt;
+&lt;span class="gd"&gt;- *&lt;/span&gt;
+&lt;span class="gi"&gt;+ * José Moreira, in 2013 and beyond, doesn&amp;#39;t care what you do with&lt;/span&gt;
+&lt;span class="gi"&gt;+ * this piece of code.&lt;/span&gt;
+&lt;span class="gi"&gt;+ *&lt;/span&gt;
+  */
+
+&lt;span class="gd"&gt;-(function(){&lt;/span&gt;
+&lt;span class="gi"&gt;+(function() {&lt;/span&gt;
+     var items = $$(&amp;#39;ol#listing input[type=&amp;quot;checkbox&amp;quot;]&amp;#39;);
+     if (items.length &amp;amp;&amp;amp; items.length &amp;gt;= 0) {
+         //  check all items
+         var i;
+&lt;span class="gd"&gt;-        for (i=0; i &amp;lt; items.length; i++) {&lt;/span&gt;
+&lt;span class="gi"&gt;+        for (i = 0; i &amp;lt; items.length; i++) {&lt;/span&gt;
+             items[i].click();
+         }
+     }
+&lt;span class="gu"&gt;@@ -22,4 +24,4 @@&lt;/span&gt;
+ // #2 ...
+ // #3 Profit !
+ // #4 Refresh page or whatever
+&lt;span class="gd"&gt;-// #5 GOTO 1&lt;/span&gt;
+&lt;span class="gi"&gt;+// #5 GOTO 1&lt;/span&gt;
+&amp;gt; // #5 GOTO 1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The script can also be customized with command-line parameters, for which the list can be obtained with &lt;code&gt;gjslint --help&lt;/code&gt; and can check even JSDoc validity.&lt;/p&gt;
+&lt;p&gt;The case in point is that an apparently simple script, triggered 8 violations of the formatting coding standard. Automating the linting process as part of a development workflow either manually, source control hooks or CI automated builds, will greatly increase the quality of any project, at a very small cost.&lt;/p&gt;</summary><category term="code-better"></category><category term="javascript"></category></entry><entry><title>Hello World.</title><link href="http://zemanel.eu/hello-world.html" rel="alternate"></link><updated>2013-04-18T06:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-18:hello-world.html</id><summary type="html">&lt;p&gt;With Python 2.x&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hello again!&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 

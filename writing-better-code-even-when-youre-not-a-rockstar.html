@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>There And Back - Writing better code Javascrit even when you're not a rockstar</title>
+    <meta name="description" content="">
+    <meta name="author" content="José Moreira">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="favicon.ico" />
+    <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="There And Back ATOM Feed" />
+
+        <link rel="stylesheet" href="./theme/css/main.css?faef631b">
+    
+    <script>var _gaq=[['_setAccount','UA-26838427-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+    <script type="text/javascript">
+	var disqus_identifier = "writing-better-code-even-when-youre-not-a-rockstar.html";
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://zemaneleu.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav">
+                <a class="btn btn-small btn-inverse active" href="./index.html"><i class="icon-white icon-home"></i> Home</a>
+                                                <a class="btn btn-small btn-inverse active" href="./pages/resume.html"><i class="icon-white icon-book"></i> Resume</a>
+                                                <a class="btn btn-small btn-inverse active" href="./archives.html"><i class="icon-white icon-briefcase"></i> Archives</a>
+                <a class="btn btn-small btn-inverse active" href="./categories.html"><i class="icon-white icon-folder-close"></i> Categories</a>
+                <a class="btn btn-small btn-inverse active" href="./tags.html"><i class="icon-white icon-tag"></i> Tags</a>
+            </div>
+        </header>
+        <div class="row">
+            <!-- sidebar -->
+            <div class="span2">
+                <div id="sidebar">
+                    <h2>zemanel.eu</h2>
+                    <!-- Avatar -->
+                    <div id="avatar"><a href="./index.html"><img src="./theme/images/avatar.jpg" alt="my avatar" /></a></div>
+                    <!-- social links -->
+                    <h3>Social</h3>
+                    <ul class="nav social">
+                                                <li><a class="icon" href="http://twitter.com/zemanel">Twitter</a></li>
+                                                <li><a class="icon" href="http://github.com/zemanel">Github</a></li>
+                                                <li><a class="icon" href="http://bitbucket.org/zemanel">Bitbucket</a></li>
+                                                <li><a class="icon" href="http://careers.stackoverflow.com/zemanel">Careers 2.0</a></li>
+                                                <li><a class="icon" href="http://pt.linkedin.com/in/josemoreira">Linkedin</a></li>
+                                                <li><a class="icon" href="http://stackoverflow.com/users/2278823/zemanel">StackOverflow</a></li>
+                                                <li><a class="icon" href="http://www.last.fm/user/jose.moreira">Last.fm</a></li>
+                                                <li><a class="icon" href="http://facebook.com/OVerdadeiroJoseMoreira">Facebook</a></li>
+                                            </ul>
+                                        <h3>Blogs</h3>
+                    <ul class="nav">
+                                        <li><a href="http://blog.getpelican.com"><i class="icon-globe"></i> GetPelican</a></li>
+                                        </ul>
+                                    </div>
+            </div>
+            <!-- content -->
+            <div class="content span10">
+                <div class="inner">
+                    	<div class="article">
+		<div class="title"><h1>Writing better code Javascrit even when you're not a rockstar</h1></div>
+		<div class="metadata"><p>
+    <strong>created</strong> <a href="./writing-better-code-even-when-youre-not-a-rockstar.html">2013-04-19 01:00:00</a>
+        <i class="icon-folder-close"></i> <strong>category</strong> <a href="./category/programming.html">programming</a>
+    <i class="icon-tag"></i> <strong>tags</strong>     <a href="./tag/code-better.html">code-better</a>    <a href="./tag/javascript.html">javascript</a></p></div>
+		<div class="post"><p>Even if you're not a rockstar developer, there are ways to easily produce better code while learning new tricks, using freely available tools that, aditionally, can automate source code inspections.</p>
+<h3>Improving Javascript source code with Google Closure Tools</h3>
+<p>There are several Javascript source code linters available. The one i have bee working with is <a href="https://developers.google.com/closure/utilities/">Closure Linter</a> wich is part of <a href="https://developers.google.com/closure/">Google Closure Tools</a>.</p>
+<h4>About the Closure Linter</h4>
+<p>From <a href="https://developers.google.com/closure/utilities/">https://developers.google.com/closure/utilities/</a></p>
+<blockquote>
+<p>The Closure Linter ensures that all of your project's JavaScript code follows the guidelines in the <a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google JavaScript Style Guide</a>. It can also automatically fix many common errors, which saves you time and lets you focus on coding.</p>
+</blockquote>
+<p>Closure Linter is a Python library that also adds a couple of command-line utilities to out toolbelt, <code>gjslint</code> for Javascript source code lintint and <code>fixjsstyle</code> to automatically apply corrections to them.  </p>
+<h4>Installing</h4>
+<p>The Closure Linter can be obtained on the Google Code project page, in the downloads section <a href="https://code.google.com/p/closure-linter/downloads/">https://code.google.com/p/closure-linter/downloads/</a>. It's Python package, so let's use <code>pip</code> to install it on a fresh Python virtual environment:</p>
+<p>let's create a fresh virtual enviroment</p>
+<div class="highlight"><pre><span class="go">zemanel@victory ? WorkDir  mkvirtualenv blogging</span>
+<span class="go">New python executable in blogging/bin/python</span>
+<span class="go">Installing setuptools............done.</span>
+<span class="go">Installing pip...............done.</span>
+</pre></div>
+
+
+<p>and <code>pip</code> install the package</p>
+<div class="highlight"><pre><span class="go">(blogging)zemanel@victory on WorkDir  pip install https://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz</span>
+<span class="go"> Downloading/unpacking https://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz</span>
+<span class="go">  Downloading closure_linter-latest.tar.gz (88kB): 88kB downloaded</span>
+<span class="go">  Running setup.py egg_info for package from https://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz</span>
+<span class="go"> Downloading/unpacking python-gflags (from closure-linter==2.3.9)</span>
+<span class="go">  Running setup.py egg_info for package python-gflags</span>
+<span class="go"> Installing collected packages: python-gflags, closure-linter</span>
+<span class="go">  Running setup.py install for python-gflags</span>
+<span class="go">  Running setup.py install for closure-linter</span>
+<span class="go">    Installing fixjsstyle script to /Users/zemanel/.virtualenvs/blogging/bin</span>
+<span class="go">    Installing gjslint script to /Users/zemanel/.virtualenvs/blogging/bin</span>
+<span class="go"> Successfully installed python-gflags closure-linter</span>
+<span class="go"> Cleaning up...</span>
+</pre></div>
+
+
+<p>Our test script will be <em>CloudAppSelectAllItems.js</em>, a <a href="https://gist.github.com/zemanel/4974451">https://gist.github.com/zemanel/4974451</a> i created to to mass deletion of uploads on <a href="http://GetCloudApp.com">http://GetCloudApp.com</a>.</p>
+<div class="highlight"><pre><span class="cm">/*</span>
+<span class="cm"> * Checks all list items on http://getcloudapp.com upload list,</span>
+<span class="cm"> *  which is useful for multiple item deletion (AKA nuke the crap of all the uploads)</span>
+<span class="cm"> *</span>
+<span class="cm"> * License:</span>
+<span class="cm"> * José Moreira, in 2013 and beyond, doesn&#39;t care what you do with this piece of code.</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+
+<span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">$$</span><span class="p">(</span><span class="s1">&#39;ol#listing input[type=&quot;checkbox&quot;]&#39;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//  check all items</span>
+        <span class="kd">var</span> <span class="nx">i</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">click</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})();</span>
+
+<span class="c1">// #1 click &quot;Delete Selected&quot;</span>
+<span class="c1">// #2 ...</span>
+<span class="c1">// #3 Profit !</span>
+<span class="c1">// #4 Refresh page or whatever</span>
+<span class="c1">// #5 GOTO 1</span>
+</pre></div>
+
+
+<p>Let's apply <code>gjslint</code> to the script and behold, crappy formatted code:</p>
+<div class="highlight"><pre><span class="p">(</span><span class="n">blogging</span><span class="p">)</span><span class="n">zemanel</span> <span class="n">at</span> <span class="n">victory</span> <span class="n">on</span> <span class="n">WorkDir</span>  <span class="n">gjslint</span> <span class="n">CloudAppSelectAllItems</span><span class="p">.</span><span class="n">js</span>
+<span class="o">-----</span> <span class="kt">FILE</span>  <span class="o">:</span>  <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zemanel</span><span class="o">/</span><span class="n">WorkDir</span><span class="o">/</span><span class="n">CloudAppSelectAllItems</span><span class="p">.</span><span class="n">js</span> <span class="o">-----</span>
+<span class="n">Line</span> <span class="mi">3</span><span class="p">,</span> <span class="n">E</span><span class="o">:</span><span class="mo">0110</span><span class="o">:</span> <span class="n">Line</span> <span class="n">too</span> <span class="kt">long</span> <span class="p">(</span><span class="mi">85</span> <span class="n">characters</span><span class="p">).</span>
+<span class="n">Line</span> <span class="mi">4</span><span class="p">,</span> <span class="n">E</span><span class="o">:</span><span class="mo">0001</span><span class="o">:</span> <span class="n">Extra</span> <span class="n">space</span> <span class="n">at</span> <span class="n">end</span> <span class="n">of</span> <span class="n">line</span>
+<span class="n">Line</span> <span class="mi">6</span><span class="p">,</span> <span class="n">E</span><span class="o">:</span><span class="mo">0110</span><span class="o">:</span> <span class="n">Line</span> <span class="n">too</span> <span class="kt">long</span> <span class="p">(</span><span class="mi">87</span> <span class="n">characters</span><span class="p">).</span>
+<span class="n">Line</span> <span class="mi">7</span><span class="p">,</span> <span class="n">E</span><span class="o">:</span><span class="mo">0001</span><span class="o">:</span> <span class="n">Extra</span> <span class="n">space</span> <span class="n">at</span> <span class="n">end</span> <span class="n">of</span> <span class="n">line</span>
+<span class="n">Line</span> <span class="mi">10</span><span class="p">,</span> <span class="n">E</span><span class="o">:</span><span class="mo">0002</span><span class="o">:</span> <span class="n">Missing</span> <span class="n">space</span> <span class="n">before</span> <span class="s">&quot;{&quot;</span>
+<span class="n">Line</span> <span class="mi">15</span><span class="p">,</span> <span class="n">E</span><span class="o">:</span><span class="mo">0002</span><span class="o">:</span> <span class="n">Missing</span> <span class="n">space</span> <span class="n">before</span> <span class="s">&quot;=&quot;</span>
+<span class="n">Line</span> <span class="mi">15</span><span class="p">,</span> <span class="n">E</span><span class="o">:</span><span class="mo">0002</span><span class="o">:</span> <span class="n">Missing</span> <span class="n">space</span> <span class="n">after</span> <span class="s">&quot;=&quot;</span>
+<span class="n">Line</span> <span class="mi">25</span><span class="p">,</span> <span class="n">E</span><span class="o">:</span><span class="mo">0001</span><span class="o">:</span> <span class="n">Extra</span> <span class="n">space</span> <span class="n">at</span> <span class="n">end</span> <span class="n">of</span> <span class="n">line</span>
+<span class="n">Found</span> <span class="mi">8</span> <span class="n">errors</span><span class="p">,</span> <span class="n">including</span> <span class="mi">0</span> <span class="n">new</span> <span class="n">errors</span><span class="p">,</span> <span class="n">in</span> <span class="mi">1</span> <span class="n">files</span> <span class="p">(</span><span class="mi">0</span> <span class="n">files</span> <span class="n">OK</span><span class="p">).</span>
+
+<span class="n">Some</span> <span class="n">of</span> <span class="n">the</span> <span class="n">errors</span> <span class="n">reported</span> <span class="n">by</span> <span class="n">GJsLint</span> <span class="n">may</span> <span class="n">be</span> <span class="k">auto</span><span class="o">-</span><span class="n">fixable</span> <span class="n">using</span> <span class="n">the</span> <span class="n">script</span>
+<span class="n">fixjsstyle</span><span class="p">.</span> <span class="n">Please</span> <span class="kt">double</span> <span class="n">check</span> <span class="n">any</span> <span class="n">changes</span> <span class="n">it</span> <span class="n">makes</span> <span class="n">and</span> <span class="n">report</span> <span class="n">any</span> <span class="n">bugs</span><span class="p">.</span> <span class="n">The</span>
+<span class="n">script</span> <span class="n">can</span> <span class="n">be</span> <span class="n">run</span> <span class="n">by</span> <span class="n">executing</span><span class="o">:</span>
+
+<span class="n">fixjsstyle</span> <span class="n">CloudAppSelectAllItems</span><span class="p">.</span><span class="n">js</span>
+</pre></div>
+
+
+<p>The script analyzed out script and warned about 8 errors. At this we can either apply the corrections ourselves and iterate until it's all good or, as stated on the last message we can apply the <code>fixjsstyle</code> script to it. Let's try that:</p>
+<div class="highlight"><pre><span class="p">(</span><span class="n">blogging</span><span class="p">)</span><span class="n">zemanel</span> <span class="n">at</span> <span class="n">victory</span> <span class="n">on</span> <span class="n">WorkDir</span>  <span class="n">fixjsstyle</span> <span class="n">CloudAppSelectAllItems</span><span class="p">.</span><span class="n">js</span>
+<span class="n">Fixed</span> <span class="mi">6</span> <span class="n">errors</span> <span class="n">in</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zemanel</span><span class="o">/</span><span class="n">WorkDir</span><span class="o">/</span><span class="n">CloudAppSelectAllItems</span><span class="p">.</span><span class="n">js</span>
+</pre></div>
+
+
+<p>6 of the 8 errors were corrected automatically by the script. Re-running the linter we get:</p>
+<div class="highlight"><pre><span class="p">(</span><span class="n">blogging</span><span class="p">)</span><span class="n">zemanel</span> <span class="n">at</span> <span class="n">victory</span> <span class="n">on</span> <span class="n">WorkDir</span>  <span class="n">fixjsstyle</span> <span class="n">CloudAppSelectAllItems</span><span class="p">.</span><span class="n">js</span>
+<span class="n">Fixed</span> <span class="mi">6</span> <span class="n">errors</span> <span class="n">in</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zemanel</span><span class="o">/</span><span class="n">WorkDir</span><span class="o">/</span><span class="n">CloudAppSelectAllItems</span><span class="p">.</span><span class="n">js</span>
+<span class="p">(</span><span class="n">blogging</span><span class="p">)</span><span class="n">zemanel</span> <span class="n">at</span> <span class="n">victory</span> <span class="n">on</span> <span class="n">WorkDir</span>  <span class="n">gjslint</span> <span class="n">CloudAppSelectAllItems</span><span class="p">.</span><span class="n">js</span>
+<span class="o">-----</span> <span class="kt">FILE</span>  <span class="o">:</span>  <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zemanel</span><span class="o">/</span><span class="n">WorkDir</span><span class="o">/</span><span class="n">CloudAppSelectAllItems</span><span class="p">.</span><span class="n">js</span> <span class="o">-----</span>
+<span class="n">Line</span> <span class="mi">3</span><span class="p">,</span> <span class="n">E</span><span class="o">:</span><span class="mo">0110</span><span class="o">:</span> <span class="n">Line</span> <span class="n">too</span> <span class="kt">long</span> <span class="p">(</span><span class="mi">85</span> <span class="n">characters</span><span class="p">).</span>
+<span class="n">Line</span> <span class="mi">6</span><span class="p">,</span> <span class="n">E</span><span class="o">:</span><span class="mo">0110</span><span class="o">:</span> <span class="n">Line</span> <span class="n">too</span> <span class="kt">long</span> <span class="p">(</span><span class="mi">87</span> <span class="n">characters</span><span class="p">).</span>
+<span class="n">Found</span> <span class="mi">2</span> <span class="n">errors</span><span class="p">,</span> <span class="n">including</span> <span class="mi">0</span> <span class="n">new</span> <span class="n">errors</span><span class="p">,</span> <span class="n">in</span> <span class="mi">1</span> <span class="n">files</span> <span class="p">(</span><span class="mi">0</span> <span class="n">files</span> <span class="n">OK</span><span class="p">).</span>
+
+<span class="n">Some</span> <span class="n">of</span> <span class="n">the</span> <span class="n">errors</span> <span class="n">reported</span> <span class="n">by</span> <span class="n">GJsLint</span> <span class="n">may</span> <span class="n">be</span> <span class="k">auto</span><span class="o">-</span><span class="n">fixable</span> <span class="n">using</span> <span class="n">the</span> <span class="n">script</span>
+<span class="n">fixjsstyle</span><span class="p">.</span> <span class="n">Please</span> <span class="kt">double</span> <span class="n">check</span> <span class="n">any</span> <span class="n">changes</span> <span class="n">it</span> <span class="n">makes</span> <span class="n">and</span> <span class="n">report</span> <span class="n">any</span> <span class="n">bugs</span><span class="p">.</span> <span class="n">The</span>
+<span class="n">script</span> <span class="n">can</span> <span class="n">be</span> <span class="n">run</span> <span class="n">by</span> <span class="n">executing</span><span class="o">:</span>
+
+<span class="n">fixjsstyle</span> <span class="n">CloudAppSelectAllItems</span><span class="p">.</span><span class="n">js</span>
+</pre></div>
+
+
+<p>The remaning warnings are related to 80 column line length. After manual editing the javascript source, we have this result:</p>
+<div class="highlight"><pre><span class="cm">/*</span>
+<span class="cm"> * Checks all list items on http://getcloudapp.com upload list,</span>
+<span class="cm"> *  which is useful for multiple item deletion (AKA nuke the crap of</span>
+<span class="cm"> *  all the uploads)</span>
+<span class="cm"> *</span>
+<span class="cm"> * License:</span>
+<span class="cm"> * José Moreira, in 2013 and beyond, doesn&#39;t care what you do with</span>
+<span class="cm"> * this piece of code.</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">$$</span><span class="p">(</span><span class="s1">&#39;ol#listing input[type=&quot;checkbox&quot;]&#39;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//  check all items</span>
+        <span class="kd">var</span> <span class="nx">i</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">click</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})();</span>
+
+<span class="c1">// #1 click &quot;Delete Selected&quot;</span>
+<span class="c1">// #2 ...</span>
+<span class="c1">// #3 Profit !</span>
+<span class="c1">// #4 Refresh page or whatever</span>
+<span class="c1">// #5 GOTO 1</span>
+</pre></div>
+
+
+<p>Running the linting tool again, we're in the clear:</p>
+<div class="highlight"><pre><span class="p">(</span><span class="n">blogging</span><span class="p">)</span><span class="n">zemanel</span> <span class="n">at</span> <span class="n">victory</span> <span class="n">on</span> <span class="n">WorkDir</span>  <span class="n">gjslint</span> <span class="n">CloudAppSelectAllItems</span><span class="p">.</span><span class="n">js</span>
+<span class="mi">1</span> <span class="n">files</span> <span class="n">checked</span><span class="p">,</span> <span class="n">no</span> <span class="n">errors</span> <span class="n">found</span><span class="p">.</span>
+</pre></div>
+
+
+<p>Obviously this was a very simple, with hardly noticeable differentes between versions, but here's a <code>diff -u</code>:</p>
+<div class="highlight"><pre><span class="gd">--- CloudAppSelectAllItems.js   2013-04-19 02:50:56.000000000 +0100</span>
+<span class="gi">+++ CloudAppSelectAllItems-linted.js    2013-04-19 02:53:05.000000000 +0100</span>
+<span class="gu">@@ -1,18 +1,20 @@</span>
+ /*
+  * Checks all list items on http://getcloudapp.com upload list,
+<span class="gd">- *  which is useful for multiple item deletion (AKA nuke the crap of all the uploads)</span>
+<span class="gd">- *</span>
+<span class="gi">+ *  which is useful for multiple item deletion (AKA nuke the crap of</span>
+<span class="gi">+ *  all the uploads)</span>
+<span class="gi">+ *</span>
+  * License:
+<span class="gd">- * José Moreira, in 2013 and beyond, doesn&#39;t care what you do with this piece of code.</span>
+<span class="gd">- *</span>
+<span class="gi">+ * José Moreira, in 2013 and beyond, doesn&#39;t care what you do with</span>
+<span class="gi">+ * this piece of code.</span>
+<span class="gi">+ *</span>
+  */
+
+<span class="gd">-(function(){</span>
+<span class="gi">+(function() {</span>
+     var items = $$(&#39;ol#listing input[type=&quot;checkbox&quot;]&#39;);
+     if (items.length &amp;&amp; items.length &gt;= 0) {
+         //  check all items
+         var i;
+<span class="gd">-        for (i=0; i &lt; items.length; i++) {</span>
+<span class="gi">+        for (i = 0; i &lt; items.length; i++) {</span>
+             items[i].click();
+         }
+     }
+<span class="gu">@@ -22,4 +24,4 @@</span>
+ // #2 ...
+ // #3 Profit !
+ // #4 Refresh page or whatever
+<span class="gd">-// #5 GOTO 1</span>
+<span class="gi">+// #5 GOTO 1</span>
+&gt; // #5 GOTO 1
+</pre></div>
+
+
+<p>The script can also be customized with command-line parameters, for which the list can be obtained with <code>gjslint --help</code> and can check even JSDoc validity.</p>
+<p>The case in point is that an apparently simple script, triggered 8 violations of the formatting coding standard. Automating the linting process as part of a development workflow either manually, source control hooks or CI automated builds, will greatly increase the quality of any project, at a very small cost.</p></div>
+		<div class="comments">
+			<h2>Comments</h2>
+		 	<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="zemanel">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			<div id="disqus_thread"></div>					</div>
+	</div>	
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer>
+            <p>
+                <small>
+                <a href="./index.html">There And Back</a>,
+                a <a href="http://docs.getpelican.com">Pelican</a> blog by &copy; José Moreira 2013
+                <a class="icon" href="./feeds/all.atom.xml">RSS</a>
+                <a class="icon" href="https://github.com/zemanel/zemanel.eu/">Source Code</a>
+                </small>
+            </p>
+        </footer>
+
+    </div>
+</body>
+</html>
