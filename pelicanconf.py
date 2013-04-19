@@ -74,5 +74,7 @@ SOCIAL = (
     ('Last.fm', 'http://www.last.fm/user/jose.moreira'),
     ('Facebook', 'http://facebook.com/OVerdadeiroJoseMoreira'),
 )
-
+BLOG_ROLL = (
+    ('GetPelican', 'http://blog.getpelican.com'),
+)
 DEFAULT_PAGINATION = 10
