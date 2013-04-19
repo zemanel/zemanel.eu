@@ -5316,6 +5316,7 @@ header .nav a {
   border-bottom: 1px solid #d0d0d0;
 }
 .content img {
+  margin: 10px 0;
   display: block;
   padding: 4px;
   line-height: 20px;
