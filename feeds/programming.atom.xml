@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/programming.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-19T01:00:00+01:00</updated><entry><title>Writing better code Javascrit even when you're not a rockstar</title><link href="http://zemanel.eu/writing-better-code-even-when-youre-not-a-rockstar.html" rel="alternate"></link><updated>2013-04-19T01:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-19:writing-better-code-even-when-youre-not-a-rockstar.html</id><summary type="html">&lt;p&gt;Even if you're not a rockstar developer, there are ways to easily produce better code while learning new tricks, using freely available tools that, aditionally, can automate source code inspections.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/programming.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-19T01:00:00+01:00</updated><entry><title>Writing better Javascript code even when you're not a rockstar</title><link href="http://zemanel.eu/writing-better-code-even-when-youre-not-a-rockstar.html" rel="alternate"></link><updated>2013-04-19T01:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-19:writing-better-code-even-when-youre-not-a-rockstar.html</id><summary type="html">&lt;p&gt;Even if you're not a rockstar developer, there are ways to easily produce better code while learning new tricks, using freely available tools that, aditionally, can automate source code inspections.&lt;/p&gt;
 &lt;h3&gt;Improving Javascript source code with Google Closure Tools&lt;/h3&gt;
-&lt;p&gt;There are several Javascript source code linters available. The one i have bee working with is &lt;a href="https://developers.google.com/closure/utilities/"&gt;Closure Linter&lt;/a&gt; wich is part of &lt;a href="https://developers.google.com/closure/"&gt;Google Closure Tools&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There are several Javascript source code linters available. The one i have been working with is &lt;a href="https://developers.google.com/closure/utilities/"&gt;Closure Linter&lt;/a&gt; which is part of &lt;a href="https://developers.google.com/closure/"&gt;Google Closure Tools&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;About the Closure Linter&lt;/h4&gt;
 &lt;p&gt;From &lt;a href="https://developers.google.com/closure/utilities/"&gt;https://developers.google.com/closure/utilities/&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The Closure Linter ensures that all of your project's JavaScript code follows the guidelines in the &lt;a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml"&gt;Google JavaScript Style Guide&lt;/a&gt;. It can also automatically fix many common errors, which saves you time and lets you focus on coding.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Closure Linter is a Python library that also adds a couple of command-line utilities to out toolbelt, &lt;code&gt;gjslint&lt;/code&gt; for Javascript source code lintint and &lt;code&gt;fixjsstyle&lt;/code&gt; to automatically apply corrections to them.  &lt;/p&gt;
+&lt;p&gt;Closure Linter is a Python library that also adds a couple of command-line utilities to our toolbelt, &lt;code&gt;gjslint&lt;/code&gt; for Javascript source code linting and &lt;code&gt;fixjsstyle&lt;/code&gt; to automatically apply corrections to them.&lt;/p&gt;
 &lt;h4&gt;Installing&lt;/h4&gt;
-&lt;p&gt;The Closure Linter can be obtained on the Google Code project page, in the downloads section &lt;a href="https://code.google.com/p/closure-linter/downloads/"&gt;https://code.google.com/p/closure-linter/downloads/&lt;/a&gt;. It's Python package, so let's use &lt;code&gt;pip&lt;/code&gt; to install it on a fresh Python virtual environment:&lt;/p&gt;
-&lt;p&gt;let's create a fresh virtual enviroment&lt;/p&gt;
+&lt;p&gt;The Closure Linter can be obtained on the Google Code project page, in the downloads section &lt;a href="https://code.google.com/p/closure-linter/downloads/"&gt;https://code.google.com/p/closure-linter/downloads/&lt;/a&gt;. It's a Python package, so let's use &lt;code&gt;pip&lt;/code&gt; to install it on a fresh Python virtual environment:&lt;/p&gt;
+&lt;p&gt;Let's create a fresh virtual enviroment&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;zemanel@victory ? WorkDir  mkvirtualenv blogging&lt;/span&gt;
 &lt;span class="go"&gt;New python executable in blogging/bin/python&lt;/span&gt;
 &lt;span class="go"&gt;Installing setuptools............done.&lt;/span&gt;
@@ -35,7 +35,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Our test script will be &lt;em&gt;CloudAppSelectAllItems.js&lt;/em&gt;, a &lt;a href="https://gist.github.com/zemanel/4974451"&gt;https://gist.github.com/zemanel/4974451&lt;/a&gt; i created to to mass deletion of uploads on &lt;a href="http://GetCloudApp.com"&gt;http://GetCloudApp.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Our test script will be &lt;em&gt;CloudAppSelectAllItems.js&lt;/em&gt;, a &lt;a href="https://gist.github.com/zemanel/4974451"&gt;https://gist.github.com/zemanel/4974451&lt;/a&gt; i created to do mass deletion of uploads on &lt;a href="http://GetCloudApp.com"&gt;http://GetCloudApp.com&lt;/a&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
 &lt;span class="cm"&gt; * Checks all list items on http://getcloudapp.com upload list,&lt;/span&gt;
 &lt;span class="cm"&gt; *  which is useful for multiple item deletion (AKA nuke the crap of all the uploads)&lt;/span&gt;
@@ -64,7 +64,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Let's apply &lt;code&gt;gjslint&lt;/code&gt; to the script and behold, crappy formatted code:&lt;/p&gt;
+&lt;p&gt;Let's apply &lt;code&gt;gjslint&lt;/code&gt; to the script and behold, badly formatted code&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;victory&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;WorkDir&lt;/span&gt;  &lt;span class="n"&gt;gjslint&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
 &lt;span class="o"&gt;-----&lt;/span&gt; &lt;span class="kt"&gt;FILE&lt;/span&gt;  &lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WorkDir&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="o"&gt;-----&lt;/span&gt;
 &lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;0110&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Line&lt;/span&gt; &lt;span class="n"&gt;too&lt;/span&gt; &lt;span class="kt"&gt;long&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;85&lt;/span&gt; &lt;span class="n"&gt;characters&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
@@ -85,13 +85,13 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The script analyzed out script and warned about 8 errors. At this we can either apply the corrections ourselves and iterate until it's all good or, as stated on the last message we can apply the &lt;code&gt;fixjsstyle&lt;/code&gt; script to it. Let's try that:&lt;/p&gt;
+&lt;p&gt;It analyzed our script and warned about 8 errors. At this point we can either apply the corrections ourselves and iterate until it's all good or, as stated on the last message, we can apply &lt;code&gt;fixjsstyle&lt;/code&gt; to it. Let's try that&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;victory&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;WorkDir&lt;/span&gt;  &lt;span class="n"&gt;fixjsstyle&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
 &lt;span class="n"&gt;Fixed&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WorkDir&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;6 of the 8 errors were corrected automatically by the script. Re-running the linter we get:&lt;/p&gt;
+&lt;p&gt;We can see that 6 of the 8 errors were corrected automatically by the script. Re-running the linter we get:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;victory&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;WorkDir&lt;/span&gt;  &lt;span class="n"&gt;fixjsstyle&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
 &lt;span class="n"&gt;Fixed&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WorkDir&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;victory&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;WorkDir&lt;/span&gt;  &lt;span class="n"&gt;gjslint&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
@@ -108,7 +108,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The remaning warnings are related to 80 column line length. After manual editing the javascript source, we have this result:&lt;/p&gt;
+&lt;p&gt;The remaning warnings are related to 80 column line length. After manual editing the javascript source, we have this result&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
 &lt;span class="cm"&gt; * Checks all list items on http://getcloudapp.com upload list,&lt;/span&gt;
 &lt;span class="cm"&gt; *  which is useful for multiple item deletion (AKA nuke the crap of&lt;/span&gt;
@@ -139,7 +139,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Running the linting tool again, we're in the clear:&lt;/p&gt;
+&lt;p&gt;Can you spot the differences ? Now imagine "finding Wally" on a 1k LOC file. Running the linting tool again, we're in the clear&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;zemanel&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;victory&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;WorkDir&lt;/span&gt;  &lt;span class="n"&gt;gjslint&lt;/span&gt; &lt;span class="n"&gt;CloudAppSelectAllItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
 &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="n"&gt;checked&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="n"&gt;found&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -186,7 +186,7 @@
 
 
 &lt;p&gt;The script can also be customized with command-line parameters, for which the list can be obtained with &lt;code&gt;gjslint --help&lt;/code&gt; and can check even JSDoc validity.&lt;/p&gt;
-&lt;p&gt;The case in point is that an apparently simple script, triggered 8 violations of the formatting coding standard. Automating the linting process as part of a development workflow either manually, source control hooks or CI automated builds, will greatly increase the quality of any project, at a very small cost.&lt;/p&gt;</summary><category term="code-better"></category><category term="javascript"></category></entry><entry><title>Hello World.</title><link href="http://zemanel.eu/hello-world.html" rel="alternate"></link><updated>2013-04-18T06:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-18:hello-world.html</id><summary type="html">&lt;p&gt;With Python 2.x&lt;/p&gt;
+&lt;p&gt;The case in point is that an apparently simple script, triggered 8 violations of the formatting coding standard. Automating the linting process as part of a development workflow either manually, through source control hooks or CI automated builds, will greatly increase the quality of any project, at a very small cost.&lt;/p&gt;</summary><category term="code-better"></category><category term="javascript"></category></entry><entry><title>Hello World.</title><link href="http://zemanel.eu/hello-world.html" rel="alternate"></link><updated>2013-04-18T06:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-18:hello-world.html</id><summary type="html">&lt;p&gt;With Python 2.x&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hello again!&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
