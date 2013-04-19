@@ -1,5 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/all.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-19T01:00:00+01:00</updated><entry><title>Writing better Javascript code even when you're not a rockstar</title><link href="http://zemanel.eu/writing-better-code-even-when-youre-not-a-rockstar.html" rel="alternate"></link><updated>2013-04-19T01:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-19:writing-better-code-even-when-youre-not-a-rockstar.html</id><summary type="html">&lt;p&gt;Even if you're not a rockstar developer, there are ways to easily produce better code while learning new tricks, using freely available tools that, aditionally, can automate source code inspections.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/all.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-19T21:00:00+01:00</updated><entry><title>Configuring Google Public DNS servers on a Thomson TG585v7 router.</title><link href="http://zemanel.eu/google-public-dns-servers-on-a-thomson-tg585v7-router.html" rel="alternate"></link><updated>2013-04-19T21:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-19:google-public-dns-servers-on-a-thomson-tg585v7-router.html</id><summary type="html">&lt;p&gt;Have an oldish (?) Thomson TG585v7 router and last night i wanted to change it's DNS servers to utilize Google Public DNS, because this domains TLD wasn't yet resolving on my end only.&lt;/p&gt;
+&lt;p&gt;From &lt;a href="https://developers.google.com/speed/public-dns/"&gt;https://developers.google.com/speed/public-dns/&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Google Public DNS is a free, global Domain Name System (DNS) resolution service, that you can use as an alternative to your current DNS provider.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Also, i have been meaning to try Google DNS and after some googling, found the answer here: &lt;a href="http://community.plus.net/library/dns/how-to-change-the-default-dns-servers-in-a-thomson-speedtouch-router/"&gt;http://community.plus.net/library/dns/how-to-change-the-default-dns-servers-in-a-thomson-speedtouch-router/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, i booted &lt;code&gt;telnet&lt;/code&gt; and here we go.&lt;/p&gt;
+&lt;p&gt;First let's login&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;zemanel on victory at ~  telnet 192.168.1.254&lt;/span&gt;
+&lt;span class="go"&gt;Trying 192.168.1.254...&lt;/span&gt;
+&lt;span class="go"&gt;Connected to 192.168.1.254.&lt;/span&gt;
+&lt;span class="go"&gt;Escape character is &amp;#39;^]&amp;#39;.&lt;/span&gt;
+&lt;span class="go"&gt;Username : Administrator&lt;/span&gt;
+&lt;span class="go"&gt;Password : *************&lt;/span&gt;
+&lt;span class="go"&gt;------------------------------------------------------------------------&lt;/span&gt;
+
+&lt;span class="go"&gt;                             ______  Thomson TG585 v7&lt;/span&gt;
+&lt;span class="go"&gt;                         ___/_____/\&lt;/span&gt;
+&lt;span class="go"&gt;                        /         /\  7.4.3.2&lt;/span&gt;
+&lt;span class="go"&gt;                  _____/__       /  \&lt;/span&gt;
+&lt;span class="go"&gt;                _/       /\_____/___ \  Copyright (c) 1999-2007, THOMSON&lt;/span&gt;
+&lt;span class="go"&gt;               //       /  \       /\ \&lt;/span&gt;
+&lt;span class="go"&gt;       _______//_______/    \     / _\/______&lt;/span&gt;
+&lt;span class="go"&gt;      /      / \       \    /    / /        /\&lt;/span&gt;
+&lt;span class="go"&gt;   __/      /   \       \  /    / /        / _\__&lt;/span&gt;
+&lt;span class="go"&gt;  / /      /     \_______\/    / /        / /   /\&lt;/span&gt;
+&lt;span class="go"&gt; /_/______/___________________/ /________/ /___/  \&lt;/span&gt;
+&lt;span class="go"&gt; \ \      \    ___________    \ \        \ \   \  /&lt;/span&gt;
+&lt;span class="go"&gt;  \_\      \  /          /\    \ \        \ \___\/&lt;/span&gt;
+&lt;span class="go"&gt;     \      \/          /  \    \ \        \  /&lt;/span&gt;
+&lt;span class="go"&gt;      \_____/          /    \    \ \________\/&lt;/span&gt;
+&lt;span class="go"&gt;           /__________/      \    \  /&lt;/span&gt;
+&lt;span class="go"&gt;           \   _____  \      /_____\/&lt;/span&gt;
+&lt;span class="go"&gt;            \ /    /\  \    /___\/&lt;/span&gt;
+&lt;span class="go"&gt;             /____/  \  \  /&lt;/span&gt;
+&lt;span class="go"&gt;             \    \  /___\/&lt;/span&gt;
+&lt;span class="go"&gt;              \____\/&lt;/span&gt;
+
+&lt;span class="go"&gt;------------------------------------------------------------------------&lt;/span&gt;
+&lt;span class="go"&gt;_{Administrator}=&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and we're in. Now let's check the current DNS list&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;_{Administrator}=&amp;gt;:dns server route list&lt;/span&gt;
+&lt;span class="go"&gt;DNS Server Entries:&lt;/span&gt;
+&lt;span class="go"&gt;  DNS server    Source    Label    Metric    Intf          State   Domain&lt;/span&gt;
+&lt;span class="go"&gt;  S 194.79.69.222                  0         Internet      UP      *&lt;/span&gt;
+&lt;span class="go"&gt;  S 195.23.129.126                 0         Internet      UP      *&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;For changing the entries, clearing the list and adding Google DNS entries is the Easy Way(c).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;  _{Administrator}=&amp;gt; dns server route flush&lt;/span&gt;
+&lt;span class="go"&gt;  _{Administrator}=&amp;gt; dns server route add dns=8.8.8.8 metric=0 intf=Internet&lt;/span&gt;
+&lt;span class="go"&gt;  _{Administrator}=&amp;gt; dns server route add dns=8.8.4.4 metric=0 intf=Internet&lt;/span&gt;
+&lt;span class="go"&gt;  _{Administrator}=&amp;gt; saveall&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Just confirming the current list&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;_{Administrator}=&amp;gt;:dns server route list&lt;/span&gt;
+&lt;span class="go"&gt;DNS Server Entries:&lt;/span&gt;
+&lt;span class="go"&gt;  DNS server    Source    Label    Metric    Intf          State   Domain&lt;/span&gt;
+&lt;span class="go"&gt;  S 8.8.8.8                        0         Internet      UP      *&lt;/span&gt;
+&lt;span class="go"&gt;  S 8.8.4.4                        0         Internet      UP      *&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and we're good to go :) .&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;  _{Administrator}=&amp;gt;exit&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="routers"></category><category term="DNS"></category><category term="old-news"></category><category term="testing-pygments"></category></entry><entry><title>Writing better Javascript code even when you're not a rockstar</title><link href="http://zemanel.eu/writing-better-code-even-when-youre-not-a-rockstar.html" rel="alternate"></link><updated>2013-04-19T01:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-19:writing-better-code-even-when-youre-not-a-rockstar.html</id><summary type="html">&lt;p&gt;Even if you're not a rockstar developer, there are ways to easily produce better code while learning new tricks, using freely available tools that, aditionally, can automate source code inspections.&lt;/p&gt;
 &lt;h3&gt;Improving Javascript source code with Google Closure Tools&lt;/h3&gt;
 &lt;p&gt;There are several Javascript source code linters available. The one i have been working with is &lt;a href="https://developers.google.com/closure/utilities/"&gt;Closure Linter&lt;/a&gt; which is part of &lt;a href="https://developers.google.com/closure/"&gt;Google Closure Tools&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;About the Closure Linter&lt;/h4&gt;
