@@ -35,6 +35,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;h4&gt;Improving a small script an an example&lt;/h4&gt;
 &lt;p&gt;Our test script will be &lt;em&gt;CloudAppSelectAllItems.js&lt;/em&gt;, a &lt;a href="https://gist.github.com/zemanel/4974451"&gt;https://gist.github.com/zemanel/4974451&lt;/a&gt; i created to do mass deletion of uploads on &lt;a href="http://GetCloudApp.com"&gt;http://GetCloudApp.com&lt;/a&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
 &lt;span class="cm"&gt; * Checks all list items on http://getcloudapp.com upload list,&lt;/span&gt;
