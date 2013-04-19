@@ -1,4 +1,4 @@
-Title: Writing better code Javascrit even when you're not a rockstar
+Title: Writing better code Javascript even when you're not a rockstar
 Date: 2013-04-19 01:00
 Tags: code-better, javascript
 Slug: writing-better-code-even-when-youre-not-a-rockstar
