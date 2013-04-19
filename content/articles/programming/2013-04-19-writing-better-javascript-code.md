@@ -49,6 +49,8 @@ and `pip` install the package
      Successfully installed python-gflags closure-linter
      Cleaning up...
 
+#### Improving a small script an an example
+
 Our test script will be *CloudAppSelectAllItems.js*, a <https://gist.github.com/zemanel/4974451> i created to do mass deletion of uploads on <http://GetCloudApp.com>
 
     :::javascript
