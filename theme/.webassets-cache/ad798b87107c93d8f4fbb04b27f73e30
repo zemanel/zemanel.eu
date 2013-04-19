@@ -5287,9 +5287,13 @@ header {
 }
 header .nav {
   text-align: right;
+  line-height: 30px;
 }
 header .nav a {
   padding-right: 10px;
+}
+#sidebar h2 {
+  margin-top: 0;
 }
 #sidebar .nav a {
   margin-top: 5px;
