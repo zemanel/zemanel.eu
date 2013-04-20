@@ -5,3 +5,6 @@
     <i class="icon-tag"></i> {% if article.tags %}<strong>tags</strong> {% for tag in article.tags %}
     <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% endfor %}{% endif %}
 </p>
+<p>
+    </small><a class="icon" href="{{_GITHUB_REPO}}{{article.get_relative_source_path()}}">{{_GITHUB_REPO}}{{article.get_relative_source_path()}}</a></small>
+</p>

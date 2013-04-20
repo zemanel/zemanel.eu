@@ -9,6 +9,9 @@
             <strong>created</strong> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.date }}</a>
             {% if page.modified %}<strong>updated</strong> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.modified }}</a> {% endif %}
         </p>
+        <p>
+            </small><a class="icon" href="{{_GITHUB_REPO}}{{page.get_relative_source_path()}}">{{_GITHUB_REPO}}{{page.get_relative_source_path()}}</a></small>
+        </p>
 		<div>{{ page.content }}</div>
 	</div>
 {% endblock %}
