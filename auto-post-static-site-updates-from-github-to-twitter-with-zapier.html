@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
-    <title>There And Back - Fear is the mind-killer</title>
+    <title>There And Back - Auto-posting static site updates from GitHub to Twitter with Zapier</title>
     <meta name="description" content="">
     <meta name="author" content="José Moreira">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
     
     <script>var _gaq=[['_setAccount','UA-26838427-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
     <script type="text/javascript">
-	var disqus_identifier = "fear-is-the-mind-killer.html";
+	var disqus_identifier = "auto-post-static-site-updates-from-github-to-twitter-with-zapier.html";
 	(function() {
 		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 		dsq.src = 'http://zemaneleu.disqus.com/embed.js';
@@ -62,25 +62,37 @@
             <div class="content span10">
                 <div class="inner">
                     	<div class="article">
-		<div class="title"><h1>Fear is the mind-killer</h1></div>
+		<div class="title"><h1>Auto-posting static site updates from GitHub to Twitter with Zapier</h1></div>
 		<div class="metadata"><p>
-    <strong>created</strong> <a href="./fear-is-the-mind-killer.html">2011-07-03 23:23:00</a>
-        <i class="icon-folder-close"></i> <strong>category</strong> <a href="./category/universe.html">universe</a>
-    <i class="icon-tag"></i> <strong>tags</strong>     <a href="./tag/dune.html">Dune</a>    <a href="./tag/old-posterous.html">old-posterous</a>    <a class="icon" href="https://github.com/zemanel/zemanel.eu/tree/master/content/articles/universe/2011-07-03_fear-is-the-mind-killer.md">https://github.com/zemanel/zemanel.eu/tree/master/content/articles/universe/2011-07-03_fear-is-the-mind-killer.md</a>
+    <strong>created</strong> <a href="./auto-post-static-site-updates-from-github-to-twitter-with-zapier.html">2013-04-20 21:00:00</a>
+        <i class="icon-folder-close"></i> <strong>category</strong> <a href="./category/programming.html">programming</a>
+    <i class="icon-tag"></i> <strong>tags</strong>     <a href="./tag/api.html">API</a>    <a href="./tag/github.html">Github</a>    <a href="./tag/zapier.html">Zapier</a>    <a href="./tag/automation.html">automation</a>    <a class="icon" href="https://github.com/zemanel/zemanel.eu/tree/master/content/articles/programming/2013-04-20-2100_auto-post-from-github-to-twitter-with-zapier.md">https://github.com/zemanel/zemanel.eu/tree/master/content/articles/programming/2013-04-20-2100_auto-post-from-github-to-twitter-with-zapier.md</a>
 </p></div>
-		<div class="post"><p>There are many quotes and many pop phrases out there, about fate, love, dating, entrepreneurship. Quotes from famous and not so famous people.</p>
-<p>The one that always made me think and feel something real and important was "Fear is the mind-killer", which i heard a long time ago during the <a href="http://www.imdb.com/title/tt0087182/">Dune</a> and i found out today, it's origin:</p>
+		<div class="post"><p>Quickly created a new zap for auto-posting to Twitter when i commit website updates to GitHub <a href="https://Zapier.com">https://Zapier.com</a>.</p>
+<p><img alt="select services" src="/static/images/2013/04/20/zapier-github-to-twitter-000.png" /></p>
+<h3>Rundown</h3>
+<p>Selected this website's repo and branch (<a href="https://github.com/zemanel/zemanel.eu/tree/master/">https://github.com/zemanel/zemanel.eu/tree/master/</a>)</p>
+<p><img alt="twitter zap screenshot 001" src="/static/images/2013/04/20/zapier-github-to-twitter-001.png" /></p>
+<p>and chose a simple and short tweet message. Too bad Twitter is url shortening my site's <a href="http://zemanel.eu">http://zemanel.eu</a> URL, it's already short!</p>
+<p><img alt="twitter zap screenshot 002" src="/static/images/2013/04/20/zapier-github-to-twitter-002.png" /></p>
+<p>Loaded some sample data and tested it out</p>
+<p><img alt="twitter zap screenshot 003" src="/static/images/2013/04/20/zapier-github-to-twitter-003.png" /></p>
+<p>and it's <a href="http://www.youtube.com/watch?v=ljIQo1OHkTI">alive and kicking</a> !</p>
+<h3>And this is it, basically</h3>
 <blockquote>
-<p>I must not fear.</p>
-<p>Fear is the mind-killer.</p>
-<p>Fear is the little-death that brings total obliteration.</p>
-<p>I will face my fear.</p>
-<p>I will permit it to pass over me and through me.</p>
-<p>And when it has gone past I will turn the inner eye to see its path.</p>
-<p>Where the fear has gone there will be nothing.</p>
-<p>Only I will remain.</p>
+<p>Yo! Just updated my site http://t.co/73vWqUZjKw</p>
+<p>"update general anchor CSS"</p>
+<p>(via @zapier)</p>
 </blockquote>
-<p>Source: <a href="http://en.wikipedia.org/wiki/Bene_Gesserit#Litany_against_fear">http://en.wikipedia.org/wiki/Bene_Gesserit#Litany_against_fear</a></p></div>
+<p>For it to be perfect, just have to improve the commit messages, since <strong>release 0.5.14</strong> is not that meaningful on Twitter :-)</p>
+<p>The generated content is actually being served from the <em>gh-pages</em> branch, as i'm using the <code>ghp-import</code> tool which allows a commit message to be specific.</p>
+<p>Currently just using the defaults, so an improvement point is to specify that commit message manually, for example:</p>
+<div class="highlight"><pre><span class="gp">$</span> ghp-import -m <span class="s2">&quot;New blog post about chunky bacon!&quot;</span> ./_output/
+</pre></div>
+
+
+<p>and use the 'gh-pages' branch as source.</p>
+<p>That is all.</p></div>
 		<div class="comments">
 			<h2>Comments</h2>
             <div id="social-share">

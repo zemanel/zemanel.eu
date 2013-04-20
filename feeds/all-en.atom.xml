@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/all-en.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-20T02:00:00+01:00</updated><entry><title>Using Zapier.com to do your dirty little work on the Web</title><link href="http://zemanel.eu/using-zapier-to-do-your-little-dirty-work.html" rel="alternate"></link><updated>2013-04-20T02:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-20:using-zapier-to-do-your-little-dirty-work.html</id><summary type="html">&lt;h3&gt;Zapier and me&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/all-en.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-20T21:00:00+01:00</updated><entry><title>Auto-posting static site updates from GitHub to Twitter with Zapier</title><link href="http://zemanel.eu/auto-post-static-site-updates-from-github-to-twitter-with-zapier.html" rel="alternate"></link><updated>2013-04-20T21:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-20:auto-post-static-site-updates-from-github-to-twitter-with-zapier.html</id><summary type="html">&lt;p&gt;Quickly created a new zap for auto-posting to Twitter when i commit website updates to GitHub &lt;a href="https://Zapier.com"&gt;https://Zapier.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="select services" src="/static/images/2013/04/20/zapier-github-to-twitter-000.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Rundown&lt;/h3&gt;
+&lt;p&gt;Selected this website's repo and branch (&lt;a href="https://github.com/zemanel/zemanel.eu/tree/master/"&gt;https://github.com/zemanel/zemanel.eu/tree/master/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="twitter zap screenshot 001" src="/static/images/2013/04/20/zapier-github-to-twitter-001.png" /&gt;&lt;/p&gt;
+&lt;p&gt;and chose a simple and short tweet message. Too bad Twitter is url shortening my site's &lt;a href="http://zemanel.eu"&gt;http://zemanel.eu&lt;/a&gt; URL, it's already short!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="twitter zap screenshot 002" src="/static/images/2013/04/20/zapier-github-to-twitter-002.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Loaded some sample data and tested it out&lt;/p&gt;
+&lt;p&gt;&lt;img alt="twitter zap screenshot 003" src="/static/images/2013/04/20/zapier-github-to-twitter-003.png" /&gt;&lt;/p&gt;
+&lt;p&gt;and it's &lt;a href="http://www.youtube.com/watch?v=ljIQo1OHkTI"&gt;alive and kicking&lt;/a&gt; !&lt;/p&gt;
+&lt;h3&gt;And this is it, basically&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Yo! Just updated my site http://t.co/73vWqUZjKw&lt;/p&gt;
+&lt;p&gt;"update general anchor CSS"&lt;/p&gt;
+&lt;p&gt;(via @zapier)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For it to be perfect, just have to improve the commit messages, since &lt;strong&gt;release 0.5.14&lt;/strong&gt; is not that meaningful on Twitter :-)&lt;/p&gt;
+&lt;p&gt;The generated content is actually being served from the &lt;em&gt;gh-pages&lt;/em&gt; branch, as i'm using the &lt;code&gt;ghp-import&lt;/code&gt; tool which allows a commit message to be specific.&lt;/p&gt;
+&lt;p&gt;Currently just using the defaults, so an improvement point is to specify that commit message manually, for example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; ghp-import -m &lt;span class="s2"&gt;&amp;quot;New blog post about chunky bacon!&amp;quot;&lt;/span&gt; ./_output/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and use the 'gh-pages' branch as source.&lt;/p&gt;
+&lt;p&gt;That is all.&lt;/p&gt;</summary><category term="API"></category><category term="Github"></category><category term="Zapier"></category><category term="automation"></category></entry><entry><title>Using Zapier.com to do your dirty little work on the Web</title><link href="http://zemanel.eu/using-zapier-to-do-your-little-dirty-work.html" rel="alternate"></link><updated>2013-04-20T02:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-20:using-zapier-to-do-your-little-dirty-work.html</id><summary type="html">&lt;h3&gt;Zapier and me&lt;/h3&gt;
 &lt;p&gt;Having read some web buzz about regarding Zapier in the past, only payed attention to it until just recently, when i was contacted by &lt;a href="https://www.paymill.com/en-gb/"&gt;https://www.paymill.com/en-gb/&lt;/a&gt; to help them add their &lt;a href="https://www.paymill.com/en-gb/documentation-3/reference/api-reference/"&gt;REST API&lt;/a&gt; as a &lt;a href="https://zapier.com/developer/reference/#appsummary"&gt;Zapier Service&lt;/a&gt;, since i am a freelancer, &lt;strong&gt;still on a quest to get more work ;-)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;By the way that Service, only for new &lt;a href="https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#transaction-object"&gt;&lt;em&gt;Transaction Successes&lt;/em&gt;&lt;/a&gt; Web Hook &lt;a href="https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#events"&gt;&lt;strong&gt;event&lt;/strong&gt;&lt;/a&gt; at the moment, is well underway and currently going through the Zapier approval process, which will probably be the topic of another post when it's publicly available.&lt;/p&gt;
 &lt;p&gt;What brings us here to this post, is exactly this blog, since i am still trying to replace Posterous.com's auto-post feature. For now, i've created a Zap to auto-post to my Twitter account when new posts are available on my &lt;a href="/feeds/all.atom.xml"&gt;RSS feed&lt;/a&gt;, because that's how Zapier rolls, data sources can either be REST API's or regular Atom/RSS feeds.&lt;/p&gt;

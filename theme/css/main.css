@@ -5274,6 +5274,7 @@ ul {
 }
 pre {
   background-color: transparent;
+  color: inherit;
 }
 header {
   margin-top: 10px;
