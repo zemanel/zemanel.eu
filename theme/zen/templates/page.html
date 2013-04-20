@@ -5,13 +5,11 @@
 {% block content %}
 	<div class='page'>
 		<div class="title"><h1>{{ page.title }}</h1></div>
-        <p class="metadata">
+        <div class="metadata">
             <strong>created</strong> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.date }}</a>
             {% if page.modified %}<strong>updated</strong> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.modified }}</a> {% endif %}
-        </p>
-        <p>
-            </small><a class="icon" href="{{_GITHUB_REPO}}{{page.get_relative_source_path()}}">{{_GITHUB_REPO}}{{page.get_relative_source_path()}}</a></small>
-        </p>
+            <a class="icon" href="{{_GITHUB_REPO}}{{page.get_relative_source_path()}}">{{_GITHUB_REPO}}{{page.get_relative_source_path()}}</a>
+        </div>
 		<div>{{ page.content }}</div>
 	</div>
 {% endblock %}
