@@ -2,15 +2,15 @@ Title: Resume
 Date: 2013-04-17 22:00
 Modified: 2013-04-17 23:00
 
+### TL;DR
+
 Software developer with a background of PHP, Python backend and frontend Javascript database driven web application development.
 
-Development Experience
-----------------------
+### Development Experience
 
 Specialize in frontend and backend web application development, utilizing the Django framework, popular Javascript libraries as JQuery and Dojo Toolkit and have successfully utilized Dojo Toolkit in frontend solutions, as well as the development of Dijit widgets.
 
-Skills
-------
+### Skills
 
 **Python [Web] Development**
 
@@ -78,15 +78,14 @@ Python
 - HipChat
 
 
-Public Portfolio
-----------------
+### Public Portfolio
 
 Django Backend and Frontend Development
 
-* http://loja.bussola.pt
-* http://www.myspinta.com
-* http://www.votavox.com
-* http://www.gillianmackenzieagency.com
+* <http://loja.bussola.pt>
+* <http://www.myspinta.com>
+* <http://www.votavox.com>
+* <http://www.gillianmackenzieagency.com>
 
 Recommendations
 ---------------
@@ -109,20 +108,6 @@ Garland Davis (Front end developer at DE-DE)
 Patrick Przybilla (Sr Technical Architect and Drupal Developer)
 
     "José is an great enthusiastic hard working web developer who is not afraid of new technologies and to bring them into running projects. Won't miss to say that he is one of the geniust code jockeys I've ever met. A full of ideas internet professional."
-
-Links
------
-
-**Social Coding**
-
-* https://bitbucket.org/zemanel
-* https://github.com/zemanel
-
-**Social Working**
-
-* https://pt.linkedin.com/in/josemoreira
-* https://people.djangoproject.com/josemoreira
-
 
 Availability
 ------------

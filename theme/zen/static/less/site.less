@@ -1,16 +1,11 @@
-// Variables
+// -- Variables
 
-// http://modernl.com/article/web-2.0-colour-palette
+// colors
+@color-writely-olive: #73880A;
+@color-light-gray: #d0d0d0;
 
-//@secundary-text-color: #36393D;
-//@secundary-text-color: #E75480; //dark pink
-//@secundary-text-color: #3F4C6B; // Mozilla blue
-//@secundary-text-color: #363636; // Bootstrap brown-ish
-
-//@secundary-text-color: #D15600; // Etsy Vermillion [#D15600]
-@secundary-text-color: #008C00;
-
-@tertiary-text-color: #d0d0d0;
+@secundary-text-color: @color-writely-olive;
+@tertiary-text-color: @color-light-gray;
 
 // Mixins
 
@@ -95,18 +90,19 @@ header {
   .title {
     .divider;
   }
+  // metadata
+  .metadata {
+    margin-bottom: 30px;
+    a {
+      margin: 0 5px 0 5px;
+    }
+    a.icon {
+      margin: 0;
+    }
+  }
   // article
   .article {
     margin-bottom: 40px;
-    .metadata {
-      margin: 20px 0;
-      a {
-        margin: 0 5px 0 5px;
-      }
-      a.icon {
-        margin: 0;
-      }
-    }
     .summary {
       margin-top: 10px;
     }
@@ -132,9 +128,6 @@ header {
   }
   // page
   .page {
-    .metadata {
-      margin-bottom: 20px;
-    }
   }
 }
 
