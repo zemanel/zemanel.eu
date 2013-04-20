@@ -79,4 +79,4 @@ SOCIAL = (
 BLOG_ROLL = (
     ('GetPelican', 'http://blog.getpelican.com'),
 )
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 20
