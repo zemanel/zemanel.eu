@@ -5340,7 +5340,11 @@ header .nav a {
   margin: 10px 0;
 }
 .content .metadata {
-  margin-bottom: 30px;
+  background-color: #eeeeee;
+  padding: 15px;
+}
+.content .metadata p {
+  margin: 0;
 }
 .content .metadata a {
   margin: 0 5px 0 5px;
@@ -5365,7 +5369,7 @@ header .nav a {
   margin-top: 10px;
 }
 .content .article .codehilite pre {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   border: 0;
 }
 footer p {
