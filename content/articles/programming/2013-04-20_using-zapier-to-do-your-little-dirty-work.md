@@ -1,8 +1,8 @@
 Title: Using Zapier.com to do your dirty little work on the Web
 Date: 2013-04-20 02:00
-Tags: no-real-content-yet-dept
+Tags: API, RSS, Twitter, Zapier, automation
 Slug: using-zapier-to-do-your-little-dirty-work
-Summary: A simple example of how <https://Zapier.com> can make my life better.
+Summary: A simple example of how <https://Zapier.com> can make my life better ![select services](/static/images/2013/04/20/zapier-create-new-zap-rss-summary.png)
 
 ### Zapier and me
 
