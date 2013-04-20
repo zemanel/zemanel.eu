@@ -3,13 +3,15 @@
 {% block title %} - {{ page.title }}{% endblock %}
 
 {% block content %}
-	<div class='page'>
-		<div class="title"><h1>{{ page.title }}</h1></div>
+    <div class='page'>
+        <div class="title"><h1>{{ page.title }}</h1></div>
         <div class="metadata">
-            <strong>created</strong> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.date }}</a>
-            {% if page.modified %}<strong>updated</strong> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.modified }}</a> {% endif %}
-            <a class="icon" href="{{_GITHUB_REPO}}{{page.get_relative_source_path()}}">{{_GITHUB_REPO}}{{page.get_relative_source_path()}}</a>
+            <p>
+                <strong>created</strong> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.date }}</a>
+                {% if page.modified %}<strong>updated</strong> <a href="{{ SITEURL }}/{{ page.url }}">{{ page.modified }}</a> {% endif %}
+                <a class="icon" href="{{_GITHUB_REPO}}{{page.get_relative_source_path()}}">Markdown</a>
+            </p>
         </div>
-		<div>{{ page.content }}</div>
-	</div>
+        <div>{{ page.content }}</div>
+    </div>
 {% endblock %}
