@@ -71,19 +71,7 @@ every time i post something new and my RSS feed is updated, after a few minutes 
 
 Although i've only scratched the surface, since this was a pretty simple example, and posting to Facebook and Google Plus isn't yet possible (it's possible to post to Facebook Pages but not user wall's it seems), i think they have something good going here and i'm not short of ideas on how to use this, even creating new services ([OpenShift](https://www.openshift.com) i'm looking at you).
 
+### That is [almost] all
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+If you got excited and want to try out Zapier, feel free to sign up through my <https://zapier.com/r/iAEC/> referral link and get some bonuses together, shall we ? We can get **+100** tasks per referral, up to **+500** ;-)
 
