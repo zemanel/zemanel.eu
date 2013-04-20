@@ -5339,6 +5339,9 @@ header .nav a {
   border-bottom: 1px solid #EEEEEE;
   margin: 10px 0;
 }
+.content .article {
+  margin-bottom: 40px;
+}
 .content .article .metadata a {
   margin: 0 5px 0 5px;
 }
