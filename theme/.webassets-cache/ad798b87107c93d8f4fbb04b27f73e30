@@ -5260,19 +5260,12 @@ a.badge:focus {
 body {
   background-color: #E8E8E8;
 }
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #363636;
-}
 a {
-  color: #363636;
+  color: #73880a;
 }
 a:hover,
 a:focus {
-  color: #363636;
+  color: #73880a;
   opacity: 0.7;
   filter: alpha(opacity=70);
 }
@@ -5294,6 +5287,15 @@ header .nav a {
 }
 #sidebar h2 {
   margin-top: 0;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+#sidebar h2 a {
+  color: #000000;
+}
+#sidebar h2 a:active,
+#sidebar h2 a:hover {
+  text-decoration: none;
 }
 #sidebar .nav a {
   margin-top: 5px;
@@ -5311,9 +5313,6 @@ header .nav a {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
-}
-.content a {
-  border-bottom: 1px solid #d0d0d0;
 }
 .content img {
   margin: 20px 0;
@@ -5339,20 +5338,20 @@ header .nav a {
   border-bottom: 1px solid #EEEEEE;
   margin: 10px 0;
 }
+.content .metadata {
+  margin-bottom: 30px;
+}
+.content .metadata a {
+  margin: 0 5px 0 5px;
+}
+.content .metadata a.icon {
+  margin: 0;
+}
 .content .article {
   margin-bottom: 40px;
 }
-.content .article .metadata a {
-  margin: 0 5px 0 5px;
-}
-.content .article .metadata a.icon {
-  margin: 0;
-}
 .content .article .summary {
   margin-top: 10px;
-}
-.content .article .post {
-  margin-top: 20px;
 }
 .content .article .comments {
   margin-top: 30px;
@@ -5367,9 +5366,6 @@ header .nav a {
 .content .article .codehilite pre {
   background-color: #EEEEEE;
   border: 0;
-}
-.content .page .metadata {
-  margin-bottom: 20px;
 }
 footer p {
   text-align: right;

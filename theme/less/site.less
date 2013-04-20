@@ -1,12 +1,11 @@
-// Variables
+// -- Variables
 
-// http://modernl.com/article/web-2.0-colour-palette
+// colors
+@color-writely-olive: #73880A;
+@color-light-gray: #d0d0d0;
 
-//@secundary-text-color: #36393D;
-//@secundary-text-color: #E75480; //dark pink
-//@secundary-text-color: #3F4C6B; // Mozilla blue
-@secundary-text-color: #363636; // Bootstrap brown-ish
-@tertiary-text-color: #d0d0d0;
+@secundary-text-color: @color-writely-olive;
+@tertiary-text-color: @color-light-gray;
 
 // Mixins
 
@@ -19,9 +18,11 @@
 body {
   background-color: #E8E8E8;
 }
-h2, h3, h4, h5, h6 {
-  color: @secundary-text-color;
-}
+
+//h2, h3, h4, h5, h6 {
+//  color: @secundary-text-color;
+//}
+
 a {
   color: @secundary-text-color;
 }
@@ -52,6 +53,14 @@ header {
 #sidebar {
   h2 {
     margin-top: 0;
+    line-height: 20px;
+    margin-bottom: 20px;
+    a {
+      color: #000000;
+    }
+    a:active, a:hover {
+      text-decoration: none;
+    }
   }
   .nav a {
     margin-top: 5px;
@@ -69,7 +78,7 @@ header {
   background-color: #FFFFFF;
   .border-radius(1px);
   a {
-    border-bottom: 1px solid @tertiary-text-color;
+    //border-bottom: 1px solid @tertiary-text-color;
   }
   img {
     margin: 20px 0;
@@ -81,22 +90,24 @@ header {
   .title {
     .divider;
   }
+  // metadata
+  .metadata {
+    margin-bottom: 30px;
+    a {
+      margin: 0 5px 0 5px;
+    }
+    a.icon {
+      margin: 0;
+    }
+  }
   // article
   .article {
     margin-bottom: 40px;
-    .metadata {
-      a {
-        margin: 0 5px 0 5px;
-      }
-      a.icon {
-        margin: 0;
-      }
-    }
     .summary {
       margin-top: 10px;
     }
     .post {
-      margin-top: 20px;
+      //margin-top: 20px;
     }
     .comments {
       margin-top: 30px;
@@ -117,9 +128,6 @@ header {
   }
   // page
   .page {
-    .metadata {
-      margin-bottom: 20px;
-    }
   }
 }
 
