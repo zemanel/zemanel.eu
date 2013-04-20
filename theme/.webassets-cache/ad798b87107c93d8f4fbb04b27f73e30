@@ -5342,6 +5342,9 @@ header .nav a {
 .content .article .metadata a {
   margin: 0 5px 0 5px;
 }
+.content .article .metadata a.icon {
+  margin: 0;
+}
 .content .article .summary {
   margin-top: 10px;
 }
