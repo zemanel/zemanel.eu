@@ -5,7 +5,11 @@
 //@secundary-text-color: #36393D;
 //@secundary-text-color: #E75480; //dark pink
 //@secundary-text-color: #3F4C6B; // Mozilla blue
-@secundary-text-color: #363636; // Bootstrap brown-ish
+//@secundary-text-color: #363636; // Bootstrap brown-ish
+
+//@secundary-text-color: #D15600; // Etsy Vermillion [#D15600]
+@secundary-text-color: #008C00;
+
 @tertiary-text-color: #d0d0d0;
 
 // Mixins
@@ -19,9 +23,11 @@
 body {
   background-color: #E8E8E8;
 }
-h2, h3, h4, h5, h6 {
-  color: @secundary-text-color;
-}
+
+//h2, h3, h4, h5, h6 {
+//  color: @secundary-text-color;
+//}
+
 a {
   color: @secundary-text-color;
 }
@@ -52,6 +58,14 @@ header {
 #sidebar {
   h2 {
     margin-top: 0;
+    line-height: 20px;
+    margin-bottom: 20px;
+    a {
+      color: #000000;
+    }
+    a:active, a:hover {
+      text-decoration: none;
+    }
   }
   .nav a {
     margin-top: 5px;
@@ -69,7 +83,7 @@ header {
   background-color: #FFFFFF;
   .border-radius(1px);
   a {
-    border-bottom: 1px solid @tertiary-text-color;
+    //border-bottom: 1px solid @tertiary-text-color;
   }
   img {
     margin: 20px 0;
@@ -85,6 +99,7 @@ header {
   .article {
     margin-bottom: 40px;
     .metadata {
+      margin: 20px 0;
       a {
         margin: 0 5px 0 5px;
       }
@@ -96,7 +111,7 @@ header {
       margin-top: 10px;
     }
     .post {
-      margin-top: 20px;
+      //margin-top: 20px;
     }
     .comments {
       margin-top: 30px;
