@@ -10,6 +10,10 @@
     <link rel="icon" href="favicon.ico" />
     <link href="{{ SITEURL }}/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
 
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,400italic,700italic,600italic,600,300italic,300|Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- webassets -->
     {% assets filters="less", output="css/main.css", "less/main.less", "less/main-responsive.less" %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
     {% endassets %}
