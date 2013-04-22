@@ -18,11 +18,13 @@
 // General site styles
 body {
   background-color: #E8E8E8;
+  font-family: "Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
+
 }
 
-//h2, h3, h4, h5, h6 {
-//  color: @secundary-text-color;
-//}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 a {
   color: @secundary-text-color;
@@ -66,6 +68,7 @@ header {
   }
   .nav a {
     margin-top: 5px;
+    color: #000000;
   }
 }
 #avatar {
@@ -79,8 +82,9 @@ header {
 .content {
   background-color: #FFFFFF;
   .border-radius(1px);
-  a {
-    //border-bottom: 1px solid @tertiary-text-color;
+  h2 a {
+    color: #000;
+    text-decoration: none;
   }
   img {
     margin: 20px 0;
@@ -96,8 +100,7 @@ header {
   .metadata {
     background-color: @color-shiny-silver;
     padding: 15px;
-    //font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
-    //font-size: 90%;
+    margin-bottom: 10px;
     p {
       margin: 0;
     }
