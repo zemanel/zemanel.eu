@@ -3,13 +3,20 @@
 {% block title %} - Categories{% endblock %}
 
 {% block content %}
-<div class="title"><h1>Categories</h1></div>
-<ul>
-{% for category, articles in categories %}
-	<li>
-        <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
-        <a class="icon" href="{{ SITEURL }}/feeds/{{ category }}.atom.xml">Atom</a>
-    </li>
-{% endfor %}
-</ul>
+<div class="categories">
+    <div class="title"><h1>Categories</h1></div>
+    <ul>
+    {% for category, articles in categories %}
+        <li>
+            <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
+            <a class="icon" href="{{ SITEURL }}/feeds/{{ category }}.atom.xml">Atom</a>
+            <ul>
+                {% for article in articles %}
+                <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
 {% endblock %}
