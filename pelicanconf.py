@@ -8,8 +8,6 @@ SITEDIR = os.path.abspath(os.path.dirname(__file__))
 AUTHOR = u'Jos\xe9 Moreira'
 SITENAME = u'There And Back'
 SITEURL = 'http://zemanel.eu'
-SITEDSN = 'zemanel.eu'  # custom setting
-_GITHUB_REPO = 'https://github.com/zemanel/zemanel.eu/tree/master/content/'
 
 RELATIVE_URLS = True
 GOOGLE_ANALYTICS = 'UA-26838427-1'
