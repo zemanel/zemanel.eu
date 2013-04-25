@@ -5386,7 +5386,7 @@ header .nav a {
 .content .article .title h1 a:active,
 .content .article .title h1 a:hover {
   text-decoration: none;
-  color: #73880a;
+  color: #000000;
 }
 .content .article .summary {
   margin-top: 10px;
