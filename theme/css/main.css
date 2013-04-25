@@ -5258,7 +5258,7 @@ a.badge:focus {
   margin: 10px 0;
 }
 body {
-  background-color: #E8E8E8;
+  background-color: #eeeeee;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1,
@@ -5295,18 +5295,6 @@ header .nav {
 header .nav a {
   padding-right: 10px;
 }
-#sidebar h2 {
-  margin-top: 0;
-  line-height: 20px;
-  margin-bottom: 20px;
-}
-#sidebar h2 a {
-  color: #000000;
-}
-#sidebar h2 a:active,
-#sidebar h2 a:hover {
-  text-decoration: none;
-}
 #sidebar .nav a {
   margin-top: 5px;
   color: #000000;
@@ -5318,6 +5306,20 @@ header .nav a {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+}
+.brand {
+  line-height: 20px;
+}
+.brand h2 {
+  margin: 0;
+}
+.brand h2 a {
+  color: #000000;
+}
+.brand h2 a:active,
+.brand h2 a:hover {
+  color: #000000;
+  text-decoration: none;
 }
 .content {
   -webkit-border-radius: 1px;
@@ -5356,10 +5358,15 @@ header .nav a {
 .content .page,
 .content .archives,
 .content .categories,
-.content .tags {
+.content .tags,
+.content .the404 {
   background-color: #ffffff;
   padding: 10px;
   margin-bottom: 20px;
+}
+.content .the404 h2 {
+  font-size: 160px;
+  line-height: 140px;
 }
 .content .metadata {
   background-color: #eeeeee;
@@ -5374,6 +5381,12 @@ header .nav a {
 }
 .content .metadata a.icon {
   margin: 0;
+}
+.content .article .title h1 a,
+.content .article .title h1 a:active,
+.content .article .title h1 a:hover {
+  text-decoration: none;
+  color: #73880a;
 }
 .content .article .summary {
   margin-top: 10px;

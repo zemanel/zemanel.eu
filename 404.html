@@ -14,26 +14,32 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,400italic,700italic,600italic,600,300italic,300|Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 
     <!-- webassets -->
-        <link rel="stylesheet" href="./theme/css/main.css?77d88a2f">
+        <link rel="stylesheet" href="./theme/css/main.css?3a4c6581">
     
     <script>var _gaq=[['_setAccount','UA-26838427-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
     </head>
 <body>
     <div class="container">
         <header>
-            <div class="nav">
-                <a class="btn btn-small btn-inverse active" href="./index.html"><i class="icon-white icon-home"></i> Home</a>
-                                                <a class="btn btn-small btn-inverse active" href="./pages/resume.html"><i class="icon-white icon-book"></i> Resume</a>
-                                                <a class="btn btn-small btn-inverse active" href="./archives.html"><i class="icon-white icon-briefcase"></i> Archives</a>
-                <a class="btn btn-small btn-inverse active" href="./categories.html"><i class="icon-white icon-folder-close"></i> Categories</a>
-                <a class="btn btn-small btn-inverse active" href="./tags.html"><i class="icon-white icon-tag"></i> Tags</a>
+            <div class="row">
+                <div class="span4 brand">
+                    <h2><a href=".">There And Back</a></h2>
+                </div>
+                <div class="span8">
+                    <div class="nav">
+                        <a class="btn btn-small btn-inverse active" href="./index.html"><i class="icon-white icon-home"></i> Home</a>
+                                                                        <a class="btn btn-small btn-inverse active" href="./pages/resume.html"><i class="icon-white icon-book"></i> Resume</a>
+                                                                        <a class="btn btn-small btn-inverse active" href="./archives.html"><i class="icon-white icon-briefcase"></i> Archives</a>
+                        <a class="btn btn-small btn-inverse active" href="./categories.html"><i class="icon-white icon-folder-close"></i> Categories</a>
+                        <a class="btn btn-small btn-inverse active" href="./tags.html"><i class="icon-white icon-tag"></i> Tags</a>
+                    </div>
+                </div>
             </div>
         </header>
         <div class="row">
             <!-- sidebar -->
             <div class="span2">
                 <div id="sidebar">
-    <h2><a href="./index.html">zemanel.eu</a></h2>
     <!-- Logo -->
     <div id="logo"><img src="./theme/images/logo.jpg" alt="site logo" /></div>
     <!-- social links -->
@@ -56,42 +62,62 @@
             <!-- content -->
             <div class="content span10">
                 <div class="inner">
-                    <h1>Whoops! Something is just wrooong ...</h1>
+                    
+<div class="the404">
+    <h1>Whoops! Something is just wrooong ...</h1>
 
-<p>
-    You got served an <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">RFC 2616 -- Hypertext Transfer Protocol -- HTTP/1.1</a>
-    <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1">Status-Code</a>, the <strong>404</strong>
-</p>
+    <p>
+        You got served an <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">RFC 2616 -- Hypertext Transfer Protocol -- HTTP/1.1</a>
+        <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1">Status-Code</a> ...
+    </p>
 
-<h2>Help</h2>
+    <h2 class="the404">The 404</h2>
 
-<h3>Relevant definitions from RFC 2616</h3>
+    <h3>What is The 404 ? Relevant definitions from RFC 2616</h3>
 
-<dl>
-    <dt><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1">Status-Code</a></dt>
-    <dd>
-        <blockquote>
-            The Status-Code element is a 3-digit integer result code of the attempt to understand and satisfy the request. These codes are fully defined in section 10. The Reason-Phrase is intended to give a short textual description of the Status-Code. The Status-Code is intended for use by automata and the Reason-Phrase is intended for the human user. The client is not required to examine or display the Reason- Phrase.
-    </blockquote>
-    </dd>
+    <dl>
+        <dt>
+            <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1">Status-Code</a>
+        </dt>
+        <dd>
+            <blockquote>
+                The Status-Code element is a 3-digit integer result code of the
+                attempt to understand and satisfy the request. These codes are
+                fully defined in section 10. The Reason-Phrase is intended to
+                give a short textual description of the Status-Code. The
+                Status-Code is intended for use by automata and the
+                Reason-Phrase is intended for the human user. The client is not
+                required to examine or display the Reason- Phrase.
+            </blockquote>
+        </dd>
 
-    <dt><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1.2">Request-URI</a></dt>
-    <dd>
-        <blockquote>
-            The Request-URI is a Uniform Resource Identifier (section 3.2) and identifies the resource upon which to apply the request. ...
-        </blockquote>
+        <dt>
+            <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1.2">Request-URI</a>
+        </dt>
+        <dd>
+            <blockquote>
+                The Request-URI is a Uniform Resource Identifier (section 3.2)
+                and identifies the resource upon which to apply the request. ...
+            </blockquote>
+        </dd>
 
-    </dd>
+        <dt>
+            <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">Status-Code 404</a></dt>
+        <dd>
+            <blockquote>
+                The server has not found anything matching the Request-URI. No
+                indication is given of whether the condition is temporary or
+                permanent. The 410 (Gone) status code SHOULD be used if the
+                server knows, through some internally configurable mechanism,
+                that an old resource is permanently unavailable and has no
+                forwarding address. This status code is commonly used when the
+                server does not wish to reveal exactly why the request has been
+                refused, or when no other response is applicable.
+            </blockquote>
+        </dd>
+    </dl>
+</div>
 
-    <dt><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">Status-Code 404</a></dt>
-    <dd>
-        <blockquote>
-            The server has not found anything matching the Request-URI. No indication is given of whether the condition is temporary or permanent. The 410 (Gone) status code SHOULD be used if the server knows, through some internally configurable mechanism, that an old resource is permanently unavailable and has no forwarding address. This status code is commonly used when the server does not wish to reveal exactly why the request has been refused, or when no other response is applicable.
-        </blockquote>
-    </dd>
-</dl>
-
-<p>Good Luck!</p>
                 </div>
             </div>
         </div>
