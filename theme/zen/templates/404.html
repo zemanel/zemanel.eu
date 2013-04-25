@@ -1,39 +1,60 @@
 {% extends "base.html" %}
+
 {% block content %}
-<h1>Whoops! Something is just wrooong ...</h1>
 
-<p>
-    You got served an <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">RFC 2616 -- Hypertext Transfer Protocol -- HTTP/1.1</a>
-    <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1">Status-Code</a>, the <strong>404</strong>
-</p>
+<div class="the404">
+    <h1>Whoops! Something is just wrooong ...</h1>
 
-<h2>Help</h2>
+    <p>
+        You got served an <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">RFC 2616 -- Hypertext Transfer Protocol -- HTTP/1.1</a>
+        <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1">Status-Code</a> ...
+    </p>
 
-<h3>Relevant definitions from RFC 2616</h3>
+    <h2 class="the404">The 404</h2>
 
-<dl>
-    <dt><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1">Status-Code</a></dt>
-    <dd>
-        <blockquote>
-            The Status-Code element is a 3-digit integer result code of the attempt to understand and satisfy the request. These codes are fully defined in section 10. The Reason-Phrase is intended to give a short textual description of the Status-Code. The Status-Code is intended for use by automata and the Reason-Phrase is intended for the human user. The client is not required to examine or display the Reason- Phrase.
-    </blockquote>
-    </dd>
+    <h3>What is The 404 ? Relevant definitions from RFC 2616</h3>
 
-    <dt><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1.2">Request-URI</a></dt>
-    <dd>
-        <blockquote>
-            The Request-URI is a Uniform Resource Identifier (section 3.2) and identifies the resource upon which to apply the request. ...
-        </blockquote>
+    <dl>
+        <dt>
+            <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1">Status-Code</a>
+        </dt>
+        <dd>
+            <blockquote>
+                The Status-Code element is a 3-digit integer result code of the
+                attempt to understand and satisfy the request. These codes are
+                fully defined in section 10. The Reason-Phrase is intended to
+                give a short textual description of the Status-Code. The
+                Status-Code is intended for use by automata and the
+                Reason-Phrase is intended for the human user. The client is not
+                required to examine or display the Reason- Phrase.
+            </blockquote>
+        </dd>
 
-    </dd>
+        <dt>
+            <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1.2">Request-URI</a>
+        </dt>
+        <dd>
+            <blockquote>
+                The Request-URI is a Uniform Resource Identifier (section 3.2)
+                and identifies the resource upon which to apply the request. ...
+            </blockquote>
+        </dd>
 
-    <dt><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">Status-Code 404</a></dt>
-    <dd>
-        <blockquote>
-            The server has not found anything matching the Request-URI. No indication is given of whether the condition is temporary or permanent. The 410 (Gone) status code SHOULD be used if the server knows, through some internally configurable mechanism, that an old resource is permanently unavailable and has no forwarding address. This status code is commonly used when the server does not wish to reveal exactly why the request has been refused, or when no other response is applicable.
-        </blockquote>
-    </dd>
-</dl>
+        <dt>
+            <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">Status-Code 404</a></dt>
+        <dd>
+            <blockquote>
+                The server has not found anything matching the Request-URI. No
+                indication is given of whether the condition is temporary or
+                permanent. The 410 (Gone) status code SHOULD be used if the
+                server knows, through some internally configurable mechanism,
+                that an old resource is permanently unavailable and has no
+                forwarding address. This status code is commonly used when the
+                server does not wish to reveal exactly why the request has been
+                refused, or when no other response is applicable.
+            </blockquote>
+        </dd>
+    </dl>
+</div>
 
-<p>Good Luck!</p>
 {% endblock %}
