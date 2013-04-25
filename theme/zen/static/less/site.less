@@ -1,11 +1,17 @@
 // -- Variables
 
-// colors
+// color pool
 @color-writely-olive: #73880A;
 @color-light-gray: #d0d0d0;
 @color-shiny-silver: #EEEEEE;
 @color-white: #FFFFFF;
+@color-newsvine-green: #006E2E;
+@color-qoop-mint: #CDEB8B;
+@color-techcrunch-green: #008C00;
 
+// color palette
+
+@primary-text-color: @color-writely-olive;
 @secundary-text-color: @color-writely-olive;
 @tertiary-text-color: @color-light-gray;
 
@@ -18,7 +24,7 @@
 
 // General site styles
 body {
-  background-color: #E8E8E8;
+  background-color: @color-shiny-silver;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -134,6 +140,14 @@ header {
 
 // article
   .article {
+    .title {
+      h1 {
+        a, a:active, a:hover {
+          text-decoration: none;
+          color: @primary-text-color;
+        }
+      }
+    }
     .summary {
       margin-top: 10px;
     }
