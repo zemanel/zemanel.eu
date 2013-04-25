@@ -19,8 +19,7 @@
 // General site styles
 body {
   background-color: #E8E8E8;
-  font-family: "Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
-
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,17 +29,21 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: @secundary-text-color;
 }
+
 a:hover, a:focus {
   color: @secundary-text-color;
   .opacity(70);
 }
+
 ul {
   list-style: square;
 }
+
 pre {
   background-color: transparent;
   color: inherit;
 }
+
 // Navigation
 header {
   margin-top: 10px;
@@ -54,24 +57,15 @@ header {
     }
   }
 }
+
 // Sidebar
 #sidebar {
-  h2 {
-    margin-top: 0;
-    line-height: 20px;
-    margin-bottom: 20px;
-    a {
-      color: #000000;
-    }
-    a:active, a:hover {
-      text-decoration: none;
-    }
-  }
   .nav a {
     margin-top: 5px;
     color: #000000;
   }
 }
+
 #logo {
   margin-bottom: 10px;
   img {
@@ -103,7 +97,7 @@ header {
     margin-bottom: 20px;
   }
 
-  // content metadata
+// content metadata
   .metadata {
     background-color: @color-shiny-silver;
     padding: 10px;
@@ -119,13 +113,12 @@ header {
     }
   }
 
-  // article
+// article
   .article {
     .summary {
       margin-top: 10px;
     }
-    .post {
-      //margin-top: 20px;
+    .post { //margin-top: 20px;
     }
     .comments {
       margin-top: 30px;
