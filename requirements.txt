@@ -1,8 +1,7 @@
 # Python dependencies
 #
-
-#-e git+git://github.com/getpelican/pelican.git@8be7c0dbae5bd094379d74fd47acb41a56f18afd#egg=pelican
-https://github.com/getpelican/pelican/archive/8be7c0dbae5bd094379d74fd47acb41a56f18afd.zip#egg=pelican
+pelican==3.2.2
+Jinja2==2.6
 
 Markdown==2.3.1
 webassets==0.8
