@@ -25,7 +25,7 @@ def html():
     """
     Generate static content
     """
-    local('pelican --verbose %s/content/ -s pelicanconf.py' % SITEDIR)
+    local('pelican %s/content/ -s pelicanconf.py' % SITEDIR)
 
 
 def clean():
@@ -59,7 +59,7 @@ def publish():
     local('git push origin gh-pages')
 
 
-def genetate_pygments_style(theme='colorful', cssclass='highlight'):
+def generate_pygments_style(theme='colorful', cssclass='highlight'):
     """
     Generates a CSS
     """
