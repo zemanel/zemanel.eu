@@ -56,10 +56,11 @@ PAGE_DIR = 'pages'
 DIRECT_TEMPLATES = (
     ('index', 'tags', 'categories', 'archives', '404')
 )
-FILES_TO_COPY = (
-    ('CNAME', 'CNAME'),
-    ('favicon.ico', 'favicon.ico'),
-)
+STATIC_PATHS = [
+    'static',
+    'CNAME',
+    'favicon.ico',
+]
 
 # Social
 TWITTER_USERNAME = 'zemanel'
