@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*- #
+# http://docs.getpelican.com/en/3.6.3/settings.html
+
 import os
 
 SITEDIR = os.path.abspath(os.path.dirname(__file__))
@@ -8,7 +10,7 @@ AUTHOR = u'Jos\xe9 Moreira'
 SITENAME = u'There And Back'
 SITEURL = 'http://zemanel.eu'
 
-RELATIVE_URLS = False
+RELATIVE_URLS = True
 GOOGLE_ANALYTICS = 'UA-26838427-1'
 FEED_DOMAIN = SITEURL
 TIMEZONE = 'Europe/Lisbon'
@@ -48,7 +50,6 @@ ASSET_CONFIG = (
 
 ## Appearence
 THEME = os.path.join(SITEDIR, 'theme/zen')
-THEME = './theme/zen'
 
 ## content
 DELETE_OUTPUT_DIRECTORY = True
