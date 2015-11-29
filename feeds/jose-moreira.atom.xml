@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/programming.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-20T21:00:00+01:00</updated><entry><title>Auto-posting static site updates from GitHub to Twitter with Zapier</title><link href="http://zemanel.eu/auto-post-static-site-updates-from-github-to-twitter-with-zapier.html" rel="alternate"></link><updated>2013-04-20T21:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-20:auto-post-static-site-updates-from-github-to-twitter-with-zapier.html</id><summary type="html">&lt;p&gt;Quickly created a new zap for auto-posting to Twitter when i commit website updates to GitHub &lt;a href="https://Zapier.com"&gt;https://Zapier.com&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>There And Back</title><link href="http://zemanel.eu/" rel="alternate"></link><link href="http://zemanel.eu/feeds/jose-moreira.atom.xml" rel="self"></link><id>http://zemanel.eu/</id><updated>2013-04-23T21:30:00+01:00</updated><entry><title>Very intriguing cube at Fundação Serralves</title><link href="http://zemanel.eu/intriguing-cube-at-fundacao-serralves.html" rel="alternate"></link><updated>2013-04-23T21:30:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-23:intriguing-cube-at-fundacao-serralves.html</id><summary type="html">&lt;p&gt;A photo of a very intriguing and wonderful looking cube&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The Cube" src="/static/images/2013/04/21/fundacao-serralves-cube.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;currently on an exhibit at Fundação Serralves &lt;a href="http://serralves.pt/en/"&gt;http://serralves.pt/en/&lt;/a&gt;.&lt;/p&gt;</summary><category term="exhibits"></category><category term="fundacao-serralves"></category></entry><entry><title>Auto-posting static site updates from GitHub to Twitter with Zapier</title><link href="http://zemanel.eu/auto-post-static-site-updates-from-github-to-twitter-with-zapier.html" rel="alternate"></link><updated>2013-04-20T21:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-20:auto-post-static-site-updates-from-github-to-twitter-with-zapier.html</id><summary type="html">&lt;p&gt;Quickly created a new zap for auto-posting to Twitter when i commit website updates to GitHub &lt;a href="https://Zapier.com"&gt;https://Zapier.com&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="select services" src="/static/images/2013/04/20/zapier-github-to-twitter-000.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;Rundown&lt;/h3&gt;
 &lt;p&gt;Selected this website's repo and branch (&lt;a href="https://github.com/zemanel/zemanel.eu/tree/master/"&gt;https://github.com/zemanel/zemanel.eu/tree/master/&lt;/a&gt;)&lt;/p&gt;
@@ -57,7 +59,81 @@
 &lt;p&gt;every time i post something new and my RSS feed is updated, after a few minutes Zapier jumps into action and posts it for me.&lt;/p&gt;
 &lt;p&gt;Although i've only scratched the surface, since this was a pretty simple example, and posting to Facebook and Google Plus isn't yet possible (it's possible to post to Facebook Pages but not user wall's it seems), i think they have something good going here and i'm not short of ideas on how to use this, even creating new services (&lt;a href="https://www.openshift.com"&gt;OpenShift&lt;/a&gt; i'm looking at you).&lt;/p&gt;
 &lt;h3&gt;That is [almost] all&lt;/h3&gt;
-&lt;p&gt;If you got excited and want to try out Zapier, feel free to sign up through my &lt;a href="https://zapier.com/r/iAEC/"&gt;https://zapier.com/r/iAEC/&lt;/a&gt; referral link and get some bonuses together, shall we ? We can get &lt;strong&gt;+100&lt;/strong&gt; tasks per referral, up to &lt;strong&gt;+500&lt;/strong&gt; ;-)&lt;/p&gt;</summary><category term="API"></category><category term="RSS"></category><category term="Twitter"></category><category term="Zapier"></category><category term="automation"></category></entry><entry><title>Writing better Javascript code even when you're not a rockstar</title><link href="http://zemanel.eu/writing-better-code-even-when-youre-not-a-rockstar.html" rel="alternate"></link><updated>2013-04-19T01:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-19:writing-better-code-even-when-youre-not-a-rockstar.html</id><summary type="html">&lt;p&gt;Even if you're not a rockstar developer, there are ways to easily produce better code while learning new tricks, using freely available tools that, aditionally, can automate source code inspections.&lt;/p&gt;
+&lt;p&gt;If you got excited and want to try out Zapier, feel free to sign up through my &lt;a href="https://zapier.com/r/iAEC/"&gt;https://zapier.com/r/iAEC/&lt;/a&gt; referral link and get some bonuses together, shall we ? We can get &lt;strong&gt;+100&lt;/strong&gt; tasks per referral, up to &lt;strong&gt;+500&lt;/strong&gt; ;-)&lt;/p&gt;</summary><category term="API"></category><category term="RSS"></category><category term="Twitter"></category><category term="Zapier"></category><category term="automation"></category></entry><entry><title>Sunset photo from my rooftop</title><link href="http://zemanel.eu/sunset-photo-rooftop.html" rel="alternate"></link><updated>2013-04-19T23:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-19:sunset-photo-rooftop.html</id><summary type="html">&lt;p&gt;Just posting a simple but beautiful, in my opinion, photo from my rooftop.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="sunset photo" src="/static/images/2013/04/03/sunset001.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Also testing out the &lt;em&gt;zap&lt;/em&gt; i just created on &lt;a href="http://zapier.com"&gt;http://zapier.com&lt;/a&gt;, for auto-posting to Twitter ^^&lt;/p&gt;
+&lt;p&gt;Feel free to test out Zapier, it's great. Sign up through my &lt;a href="https://zapier.com/r/iAEC/"&gt;https://zapier.com/r/iAEC/&lt;/a&gt; referral link and get some bonuses together, shall we ? ;-)&lt;/p&gt;</summary><category term="sunset"></category><category term="photos"></category></entry><entry><title>Configuring Google Public DNS servers on a Thomson TG585v7 router.</title><link href="http://zemanel.eu/google-public-dns-servers-on-a-thomson-tg585v7-router.html" rel="alternate"></link><updated>2013-04-19T21:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-19:google-public-dns-servers-on-a-thomson-tg585v7-router.html</id><summary type="html">&lt;p&gt;Have an oldish (?) Thomson TG585v7 router and last night i wanted to change it's DNS servers to utilize Google Public DNS, because this domains TLD wasn't yet resolving on my end only.&lt;/p&gt;
+&lt;p&gt;From &lt;a href="https://developers.google.com/speed/public-dns/"&gt;https://developers.google.com/speed/public-dns/&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Google Public DNS is a free, global Domain Name System (DNS) resolution service, that you can use as an alternative to your current DNS provider.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Also, i have been meaning to try Google DNS and after some googling, found the answer here: &lt;a href="http://community.plus.net/library/dns/how-to-change-the-default-dns-servers-in-a-thomson-speedtouch-router/"&gt;http://community.plus.net/library/dns/how-to-change-the-default-dns-servers-in-a-thomson-speedtouch-router/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, i booted &lt;code&gt;telnet&lt;/code&gt; and here we go.&lt;/p&gt;
+&lt;p&gt;First let's login&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;zemanel on victory at ~  telnet 192.168.1.254&lt;/span&gt;
+&lt;span class="go"&gt;Trying 192.168.1.254...&lt;/span&gt;
+&lt;span class="go"&gt;Connected to 192.168.1.254.&lt;/span&gt;
+&lt;span class="go"&gt;Escape character is &amp;#39;^]&amp;#39;.&lt;/span&gt;
+&lt;span class="go"&gt;Username : Administrator&lt;/span&gt;
+&lt;span class="go"&gt;Password : *************&lt;/span&gt;
+&lt;span class="go"&gt;------------------------------------------------------------------------&lt;/span&gt;
+
+&lt;span class="go"&gt;                             ______  Thomson TG585 v7&lt;/span&gt;
+&lt;span class="go"&gt;                         ___/_____/\&lt;/span&gt;
+&lt;span class="go"&gt;                        /         /\  7.4.3.2&lt;/span&gt;
+&lt;span class="go"&gt;                  _____/__       /  \&lt;/span&gt;
+&lt;span class="go"&gt;                _/       /\_____/___ \  Copyright (c) 1999-2007, THOMSON&lt;/span&gt;
+&lt;span class="go"&gt;               //       /  \       /\ \&lt;/span&gt;
+&lt;span class="go"&gt;       _______//_______/    \     / _\/______&lt;/span&gt;
+&lt;span class="go"&gt;      /      / \       \    /    / /        /\&lt;/span&gt;
+&lt;span class="go"&gt;   __/      /   \       \  /    / /        / _\__&lt;/span&gt;
+&lt;span class="go"&gt;  / /      /     \_______\/    / /        / /   /\&lt;/span&gt;
+&lt;span class="go"&gt; /_/______/___________________/ /________/ /___/  \&lt;/span&gt;
+&lt;span class="go"&gt; \ \      \    ___________    \ \        \ \   \  /&lt;/span&gt;
+&lt;span class="go"&gt;  \_\      \  /          /\    \ \        \ \___\/&lt;/span&gt;
+&lt;span class="go"&gt;     \      \/          /  \    \ \        \  /&lt;/span&gt;
+&lt;span class="go"&gt;      \_____/          /    \    \ \________\/&lt;/span&gt;
+&lt;span class="go"&gt;           /__________/      \    \  /&lt;/span&gt;
+&lt;span class="go"&gt;           \   _____  \      /_____\/&lt;/span&gt;
+&lt;span class="go"&gt;            \ /    /\  \    /___\/&lt;/span&gt;
+&lt;span class="go"&gt;             /____/  \  \  /&lt;/span&gt;
+&lt;span class="go"&gt;             \    \  /___\/&lt;/span&gt;
+&lt;span class="go"&gt;              \____\/&lt;/span&gt;
+
+&lt;span class="go"&gt;------------------------------------------------------------------------&lt;/span&gt;
+&lt;span class="go"&gt;_{Administrator}=&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and we're in. Now let's check the current DNS list&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;_{Administrator}=&amp;gt;:dns server route list&lt;/span&gt;
+&lt;span class="go"&gt;DNS Server Entries:&lt;/span&gt;
+&lt;span class="go"&gt;  DNS server    Source    Label    Metric    Intf          State   Domain&lt;/span&gt;
+&lt;span class="go"&gt;  S 194.79.69.222                  0         Internet      UP      *&lt;/span&gt;
+&lt;span class="go"&gt;  S 195.23.129.126                 0         Internet      UP      *&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;For changing the entries, clearing the list and adding Google DNS entries is the Easy Way(c).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;  _{Administrator}=&amp;gt; dns server route flush&lt;/span&gt;
+&lt;span class="go"&gt;  _{Administrator}=&amp;gt; dns server route add dns=8.8.8.8 metric=0 intf=Internet&lt;/span&gt;
+&lt;span class="go"&gt;  _{Administrator}=&amp;gt; dns server route add dns=8.8.4.4 metric=0 intf=Internet&lt;/span&gt;
+&lt;span class="go"&gt;  _{Administrator}=&amp;gt; saveall&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Just confirming the current list&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;_{Administrator}=&amp;gt;:dns server route list&lt;/span&gt;
+&lt;span class="go"&gt;DNS Server Entries:&lt;/span&gt;
+&lt;span class="go"&gt;  DNS server    Source    Label    Metric    Intf          State   Domain&lt;/span&gt;
+&lt;span class="go"&gt;  S 8.8.8.8                        0         Internet      UP      *&lt;/span&gt;
+&lt;span class="go"&gt;  S 8.8.4.4                        0         Internet      UP      *&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and we're good to go :) .&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;  _{Administrator}=&amp;gt;exit&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="routers"></category><category term="DNS"></category><category term="old-news"></category><category term="testing-pygments"></category></entry><entry><title>Writing better Javascript code even when you're not a rockstar</title><link href="http://zemanel.eu/writing-better-code-even-when-youre-not-a-rockstar.html" rel="alternate"></link><updated>2013-04-19T01:00:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2013-04-19:writing-better-code-even-when-youre-not-a-rockstar.html</id><summary type="html">&lt;p&gt;Even if you're not a rockstar developer, there are ways to easily produce better code while learning new tricks, using freely available tools that, aditionally, can automate source code inspections.&lt;/p&gt;
 &lt;h3&gt;Improving Javascript source code with Google Closure Tools&lt;/h3&gt;
 &lt;p&gt;There are several Javascript source code linters available. The one i have been working with is &lt;a href="https://developers.google.com/closure/utilities/"&gt;Closure Linter&lt;/a&gt; which is part of &lt;a href="https://developers.google.com/closure/"&gt;Google Closure Tools&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;About the Closure Linter&lt;/h4&gt;
@@ -268,4 +344,84 @@ fixjsstyle CloudAppSelectAllItems.js
 &lt;p&gt;Starting a new blog based on &lt;a href="http://getpelican.com"&gt;Pelican&lt;/a&gt; and will import some older posts from my old Posterous-dead website.&lt;/p&gt;
 &lt;p&gt;I'm a Python/Javascript developer, Linux/OSX lover with a thing for devops. There are some cool posts i intend to write, for example how to write better code when you're not a rockstar, how to run applications on &lt;a href="http://openshift.com"&gt;OpenShift&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I'm also a Django developer (write web applications with Django, not a commiter) and love &lt;a href="http://dojotoolkit.com"&gt;Dojo Toolkit&lt;/a&gt;, so i hope to write more about those as well.&lt;/p&gt;
-&lt;p&gt;That is all, have fun!&lt;/p&gt;</summary><category term="no-real-content-yet-dept"></category></entry><entry><title>Today is Programmer's Day</title><link href="http://zemanel.eu/today-is-programmers-day.html" rel="alternate"></link><updated>2010-09-13T18:17:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2010-09-13:today-is-programmers-day.html</id><summary type="html">&lt;p&gt;Today is Programmer's Day &lt;a href="http://en.wikipedia.org/wiki/Programmers_Day"&gt;http://en.wikipedia.org/wiki/Programmers_Day&lt;/a&gt;&lt;/p&gt;</summary><category term="special-day"></category></entry></feed>
+&lt;p&gt;That is all, have fun!&lt;/p&gt;</summary><category term="no-real-content-yet-dept"></category></entry><entry><title>Check out Posterous for Android</title><link href="http://zemanel.eu/check-out-posterous-for-android.html" rel="alternate"></link><updated>2013-04-18T10:50:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2011-11-06:check-out-posterous-for-android.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Posterous is the easiest way to share stories, photos and videos with the people you care about most. With Posterous, you can either post content to your public web site or selectively share to a private space.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://market.android.com/developer?pub=Posterous"&gt;https://market.android.com/developer?pub=Posterous&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;edit:&lt;/p&gt;
+&lt;p&gt;Posterous is dead.&lt;/p&gt;</summary><category term="posterous"></category><category term="android"></category></entry><entry><title>Fear is the mind-killer</title><link href="http://zemanel.eu/fear-is-the-mind-killer.html" rel="alternate"></link><updated>2011-07-03T23:23:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2011-07-03:fear-is-the-mind-killer.html</id><summary type="html">&lt;p&gt;There are many quotes and many pop phrases out there, about fate, love, dating, entrepreneurship. Quotes from famous and not so famous people.&lt;/p&gt;
+&lt;p&gt;The one that always made me think and feel something real and important was "Fear is the mind-killer", which i heard a long time ago during the &lt;a href="http://www.imdb.com/title/tt0087182/"&gt;Dune&lt;/a&gt; and i found out today, it's origin:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I must not fear.&lt;/p&gt;
+&lt;p&gt;Fear is the mind-killer.&lt;/p&gt;
+&lt;p&gt;Fear is the little-death that brings total obliteration.&lt;/p&gt;
+&lt;p&gt;I will face my fear.&lt;/p&gt;
+&lt;p&gt;I will permit it to pass over me and through me.&lt;/p&gt;
+&lt;p&gt;And when it has gone past I will turn the inner eye to see its path.&lt;/p&gt;
+&lt;p&gt;Where the fear has gone there will be nothing.&lt;/p&gt;
+&lt;p&gt;Only I will remain.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Source: &lt;a href="http://en.wikipedia.org/wiki/Bene_Gesserit#Litany_against_fear"&gt;http://en.wikipedia.org/wiki/Bene_Gesserit#Litany_against_fear&lt;/a&gt;&lt;/p&gt;</summary><category term="Dune"></category><category term="old-posterous"></category></entry><entry><title>Cultural differences</title><link href="http://zemanel.eu/cultural-differences.html" rel="alternate"></link><updated>2011-03-15T22:44:00+00:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2011-03-15:cultural-differences.html</id><summary type="html">&lt;p&gt;I'm on my way back from a small trip to Lisbon, where i attended part of
+a Portuguese Google Technology Users Group, hosted by Google/Paul
+Kinlan, presenting Google Chrome Webstore features. The whole event
+looked yummi.&lt;/p&gt;
+&lt;p&gt;Since i'm from Porto, which is 320km/3h (slow/cheaper) train away from
+Lisbon and $things have been rough, i wasn't intending on showing
+up, but since i got an e-mail from the organization (or someone
+close) to drop by and present something on the developers panel (which
+i'm thankful for), i decided to code something up related to the event,
+minimally interesting,while in a way representing our Northern developer
+community.&lt;/p&gt;
+&lt;p&gt;So, i started coding a Google Chrome, extension to chart browser process
+resources in realtime, since last wednesday, using Dojo 1.6 features and
+Chrome's experimental API's, which ended up being not that bad.&lt;/p&gt;
+&lt;p&gt;The event was supposed to start around 7pm, so i took a train and
+arrived at about 6.30pm. The last train back home was at 9.30pm and
+since i couldn't afford to stay over, i've had asked before and live at
+the event today, to bunk at someone's couch, with no replies, so i had
+to take the train back.&lt;/p&gt;
+&lt;p&gt;Most people started showing up at 7.15/7.30pm and Paul Kinlan's talk at
+about 8pm, when most of the people were at the venue, so i was only able
+to attend about 40m of Paul's talk, which was great.&lt;/p&gt;
+&lt;p&gt;So, basically, i spent most of my last savings and 6h on traveling,
+about 6/8h working on the tech demo, because people weren't kind enough
+to let me drop on their couch for one night.&lt;/p&gt;
+&lt;p&gt;I'm not saying that people are forced to do anything. Probably there
+wasn't even that possibility. And it wasn't a total loss, i learned a
+few stuff on the way, i always do, tech and socially/community wise.&lt;/p&gt;
+&lt;p&gt;Now let me tell you another story. Last year i competed at NodeKO, for
+which i used Dojo as a UI toolkit and was invited by a Sitepen's
+management team, Dylan, to attend a miniconf in London, talk about the
+project and Dojo's use in it. Cash wasn't also abundant at the time, but
+i really wanted to be there, get to know London, the developer
+community, have a nice time and learn new stuff.&lt;/p&gt;
+&lt;p&gt;Since Dylan invited me to bunk at his bunker, you know, because i was
+low on resources and spent a lot of meaningful cash on the trip, i
+bought the plane tickets, took off and had a great time.&lt;/p&gt;
+&lt;p&gt;Other than that, i've even had invitations to bunk at Internet/freenode
+people's bunker a few month's to code on projects, in the Silicon
+forking Valley.&lt;/p&gt;
+&lt;p&gt;I've had guests from New York at my (old) place, which where
+acquaintaces of acquaintaces of freelance partners of mine over the net,
+ that i hardly knew but trusted the referrals, which i took in my own
+home and toured them around the region a couple of full days.&lt;/p&gt;
+&lt;p&gt;It pisses me off, not feeling any kind of support in my own forking
+country.&lt;/p&gt;
+&lt;p&gt;At a tech level, most of the hacker communities, at least around coding
+languages (Java, Python, etc) are dead. Most people don't give a damn.&lt;/p&gt;
+&lt;p&gt;Maybe i'm overreacting, or just acting like a kid or a wave short of a
+ship wreck but all i feel like saying to people around here is "take
+your nose off your own butt and get real".&lt;/p&gt;
+&lt;p&gt;Rant over.&lt;/p&gt;</summary><category term="culture"></category><category term="rant"></category></entry><entry><title>Quotes</title><link href="http://zemanel.eu/quotes.html" rel="alternate"></link><updated>2011-02-12T23:28:00+00:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2011-02-12:quotes.html</id><summary type="html">&lt;p&gt;Quotes are just quotes, but some quotes are more quotable than others.   &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Reasonable men adapt themselves to the world.&lt;/p&gt;
+&lt;p&gt;Unreasonable men adapt the world to themselves.&lt;/p&gt;
+&lt;p&gt;That's why all progress depends on unreasonable men.&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="filosophy"></category></entry><entry><title>Today is Programmer's Day</title><link href="http://zemanel.eu/today-is-programmers-day.html" rel="alternate"></link><updated>2010-09-13T18:17:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2010-09-13:today-is-programmers-day.html</id><summary type="html">&lt;p&gt;Today is Programmer's Day &lt;a href="http://en.wikipedia.org/wiki/Programmers_Day"&gt;http://en.wikipedia.org/wiki/Programmers_Day&lt;/a&gt;&lt;/p&gt;</summary><category term="special-day"></category></entry><entry><title>Hot Linux Jobs</title><link href="http://zemanel.eu/hot-linux-jobs.html" rel="alternate"></link><updated>2010-08-26T21:01:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2010-08-26:hot-linux-jobs.html</id><summary type="html">&lt;p&gt;If you're looking for open source jobs, check out &lt;a href="http://hotlinuxjobs.com"&gt;http://hotlinuxjobs.com&lt;/a&gt; for the USA and &lt;a href="http://linux-lancers.com"&gt;http://linux-lancers.com&lt;/a&gt; for Europe.&lt;/p&gt;
+&lt;p&gt;Drop a mail to Lukas Chaplin (Linux Lancers) lchaplin AT linux-lancers.com&lt;/p&gt;</summary><category term="jobs"></category><category term="old-posterous"></category></entry><entry><title>My new domain, zemanel.eu</title><link href="http://zemanel.eu/my-new-domain-zemanel-eu.html" rel="alternate"></link><updated>2010-08-13T09:35:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2010-08-13:my-new-domain-zemanel-eu.html</id><summary type="html">&lt;p&gt;Registered http://zemanel.eu tonight and moved this Posterous over
+there. Posterous is amazing. I love Posterous. Now i'm just missing over
+9000 entries in my DNS manager to setup Google Apps ...&lt;/p&gt;</summary><category term="posterous"></category></entry><entry><title>Please support SomaFM!</title><link href="http://zemanel.eu/please-suport-soma-fm.html" rel="alternate"></link><updated>2013-04-18T10:40:00+01:00</updated><author><name>José Moreira</name></author><id>tag:zemanel.eu,2010-07-30:please-suport-soma-fm.html</id><summary type="html">&lt;p&gt;&lt;a href="http://somafm.com/support/"&gt;http://somafm.com/support/&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SomaFM is 19 unique channels of listener-supported, commercial-free, underground/alternative radio broadcasting from San Francisco. All music hand-picked by SomaFM's award-winning DJs and music directors."&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I've been doing my small part, life would be harder without them ...&lt;/p&gt;</summary></entry></feed>
