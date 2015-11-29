@@ -2,21 +2,22 @@
 import os
 
 SITEDIR = os.path.abspath(os.path.dirname(__file__))
-
 # General Settings
 
 AUTHOR = u'Jos\xe9 Moreira'
 SITENAME = u'There And Back'
 SITEURL = 'http://zemanel.eu'
 
-RELATIVE_URLS = True
+RELATIVE_URLS = False
 GOOGLE_ANALYTICS = 'UA-26838427-1'
 FEED_DOMAIN = SITEURL
 TIMEZONE = 'Europe/Lisbon'
 DEFAULT_LANG = u'en'
 
 # Plugins
-PLUGIN_PATH = os.path.join(SITEDIR, 'vendor/pelican_plugins')
+PLUGIN_PATHS = (
+    os.path.join(SITEDIR, 'vendor/pelican_plugins'),
+)
 
 PLUGINS = [
     'sitemap',
@@ -47,12 +48,17 @@ ASSET_CONFIG = (
 
 ## Appearence
 THEME = os.path.join(SITEDIR, 'theme/zen')
+THEME = './theme/zen'
 
 ## content
 DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_PATH = os.path.join(SITEDIR, '_output')
-ARTICLE_DIR = 'articles'
-PAGE_DIR = 'pages'
+ARTICLE_PATHS = (
+    'articles',
+)
+PAGE_PATHS = (
+    'pages',
+)
 DIRECT_TEMPLATES = (
     ('index', 'tags', 'categories', 'archives', '404')
 )

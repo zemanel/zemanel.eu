@@ -1,21 +1,21 @@
 # Python dependencies
 
-pelican==3.3
-Jinja2==2.7
+pelican==3.6.2
+Jinja2==2.8
 
-Markdown==2.3.1
-webassets==0.8
+Markdown==2.6.5
+webassets== 0.11.1
 py_w3c
 
 # devops
-Fabric==1.6.0
-honcho==0.4.2
+Fabric==1.10.2
+honcho==0.6.6
 
 # quality check
 http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz#egg=closure_linter
-flake8==2.0
+flake8==2.5.0
 
 ## Deploy
 
 # for Github project pages
-ghp-import==0.3.2
+ghp-import==0.4.1
