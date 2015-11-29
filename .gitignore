@@ -1,5 +1,5 @@
 *.pid
 *.pyc
 _output
+_stuff
 node_modules
-

@@ -25,7 +25,7 @@ def html():
     """
     Generate static content
     """
-    local('pelican %s/content/ -s pelicanconf.py' % SITEDIR)
+    local('pelican -D %s/content/ -s pelicanconf.py' % SITEDIR)
 
 
 def clean():

@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*- #
+# http://docs.getpelican.com/en/3.6.3/settings.html
+
 import os
 
 SITEDIR = os.path.abspath(os.path.dirname(__file__))
-
 # General Settings
 
 AUTHOR = u'Jos\xe9 Moreira'
@@ -16,7 +17,9 @@ TIMEZONE = 'Europe/Lisbon'
 DEFAULT_LANG = u'en'
 
 # Plugins
-PLUGIN_PATH = os.path.join(SITEDIR, 'vendor/pelican_plugins')
+PLUGIN_PATHS = (
+    os.path.join(SITEDIR, 'vendor/pelican_plugins'),
+)
 
 PLUGINS = [
     'sitemap',
@@ -51,8 +54,12 @@ THEME = os.path.join(SITEDIR, 'theme/zen')
 ## content
 DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_PATH = os.path.join(SITEDIR, '_output')
-ARTICLE_DIR = 'articles'
-PAGE_DIR = 'pages'
+ARTICLE_PATHS = (
+    'articles',
+)
+PAGE_PATHS = (
+    'pages',
+)
 DIRECT_TEMPLATES = (
     ('index', 'tags', 'categories', 'archives', '404')
 )
